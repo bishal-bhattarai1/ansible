@@ -1,0 +1,3 @@
+ansible -i inventory -m apt -a "name=apache2 state=present" web --become
+ansible -i inventory -m apt -a "name=apache2 state=present enabled=yes" web --become  [Service is enabled or not]
+ansible -i inventory -m copy -a "src=index.html dest=/var/www/html/" web --beacome

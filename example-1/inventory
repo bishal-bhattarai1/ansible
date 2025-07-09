@@ -1,0 +1,1 @@
+web ansible_host=192.168.56.35 ansible_user=vagrant ansible_password=vagrant 
