@@ -1,1 +1,5 @@
-keys/ansible-keys
+# Ignore all private keys
+*.pem
+*.key
+ansible-keys
+
