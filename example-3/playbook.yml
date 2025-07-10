@@ -20,3 +20,18 @@
      copy:
        src: index.html
        dest: /var/www/html/
+
+- name: Mysql Server Setup
+  hosts: dbservergrp
+  become: True
+  tasks:
+   - name: Install Mysql Server
+     apt:
+      name: mysql-server
+      state: present
+
+   - name: Start and enabel mysql-server
+     service:
+      name: mysql-server
+      state: present
+      enabled: yes
