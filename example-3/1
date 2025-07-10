@@ -1,14 +1,37 @@
-web ansible_host=192.168.56.35 ansible_user=vagrant ansible_password=vagrant
-web1 ansible_host=192.168.56.40 ansible_user=vagrant ansible_ssh_private_key_file=/home/vagrant/ansible/example-3/ansible-keys
+---
+- name: Setup Webserver
+  hosts: web
+  become: True
+  tasks:
+   - name: Install Apache2 package
+     apt:
+       name: apache2
+       state: present
+       #state: absent [Removed the Service]
 
 
+   - name: Start Apache2 Service
+     service:
+       name: apache2
+       state: started
+       enabled: yes
 
+   - name: Copy Model
+     copy:
+       src: index.html
+       dest: /var/www/html/
 
+- name: Mysql Server Setup
+  hosts: dbservergrp
+  become: True
+  tasks:
+   - name: Install Mysql Server
+     apt:
+      name: mysql-server
+      state: present
 
-# making the group
-
-[webserver]
-web
-
-[dbserver]
-web1
+   - name: Start and enabel mysql-server
+     service:
+      name: mysql-server
+      state: started
+      enabled: yes
