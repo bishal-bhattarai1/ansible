@@ -1,0 +1,197 @@
+2025-07-15 06:40:19,427 p=2555 u=vagrant n=ansible | PLAY [Setup DB] *************************************************************************************************************************************************************************************************
+2025-07-15 06:40:19,452 p=2555 u=vagrant n=ansible | TASK [Gathering Facts] ******************************************************************************************************************************************************************************************
+2025-07-15 06:40:22,680 p=2555 u=vagrant n=ansible | ok: [web1]
+2025-07-15 06:40:22,690 p=2555 u=vagrant n=ansible | TASK [Install mysql server] *************************************************************************************************************************************************************************************
+2025-07-15 06:40:25,256 p=2555 u=vagrant n=ansible | ok: [web1]
+2025-07-15 06:40:25,265 p=2555 u=vagrant n=ansible | TASK [Start and enable mysql server] ****************************************************************************************************************************************************************************
+2025-07-15 06:40:26,298 p=2555 u=vagrant n=ansible | ok: [web1]
+2025-07-15 06:40:26,308 p=2555 u=vagrant n=ansible | TASK [Install python3-pymysql pkg] ******************************************************************************************************************************************************************************
+2025-07-15 06:40:28,341 p=2555 u=vagrant n=ansible | ok: [web1]
+2025-07-15 06:40:28,350 p=2555 u=vagrant n=ansible | TASK [Creat a new database with name 'devopsdb'] ****************************************************************************************************************************************************************
+2025-07-15 06:40:29,135 p=2555 u=vagrant n=ansible | ok: [web1]
+2025-07-15 06:40:29,144 p=2555 u=vagrant n=ansible | TASK [Crete a database user with name 'devops' and password 'Admin@123' with all database privileges] ***********************************************************************************************************
+2025-07-15 06:40:30,069 p=2555 u=vagrant n=ansible | [WARNING]: Module did not set no_log for update_password
+
+2025-07-15 06:40:30,070 p=2555 u=vagrant n=ansible | changed: [web1]
+2025-07-15 06:40:30,075 p=2555 u=vagrant n=ansible | PLAY RECAP ******************************************************************************************************************************************************************************************************
+2025-07-15 06:40:30,075 p=2555 u=vagrant n=ansible | web1                       : ok=6    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2025-07-15 06:49:05,987 p=2791 u=vagrant n=ansible | PLAY [Setup DB] *************************************************************************************************************************************************************************************************
+2025-07-15 06:49:06,027 p=2791 u=vagrant n=ansible | TASK [Gathering Facts] ******************************************************************************************************************************************************************************************
+2025-07-15 06:49:08,898 p=2791 u=vagrant n=ansible | ok: [web1]
+2025-07-15 06:49:08,910 p=2791 u=vagrant n=ansible | TASK [Install mysql server] *************************************************************************************************************************************************************************************
+2025-07-15 06:49:11,366 p=2791 u=vagrant n=ansible | ok: [web1]
+2025-07-15 06:49:11,375 p=2791 u=vagrant n=ansible | TASK [Start and enable mysql server] ****************************************************************************************************************************************************************************
+2025-07-15 06:49:12,570 p=2791 u=vagrant n=ansible | ok: [web1]
+2025-07-15 06:49:12,579 p=2791 u=vagrant n=ansible | TASK [Install python3-pymysql pkg] ******************************************************************************************************************************************************************************
+2025-07-15 06:49:14,590 p=2791 u=vagrant n=ansible | ok: [web1]
+2025-07-15 06:49:14,598 p=2791 u=vagrant n=ansible | TASK [Creat a new database with name 'devopsdb'] ****************************************************************************************************************************************************************
+2025-07-15 06:49:15,311 p=2791 u=vagrant n=ansible | ok: [web1]
+2025-07-15 06:49:15,321 p=2791 u=vagrant n=ansible | TASK [Crete a database user with name 'devops' and password 'Admin@123' with all database privileges] ***********************************************************************************************************
+2025-07-15 06:49:16,099 p=2791 u=vagrant n=ansible | [WARNING]: Module did not set no_log for update_password
+
+2025-07-15 06:49:16,100 p=2791 u=vagrant n=ansible | changed: [web1]
+2025-07-15 06:49:16,105 p=2791 u=vagrant n=ansible | PLAY RECAP ******************************************************************************************************************************************************************************************************
+2025-07-15 06:49:16,105 p=2791 u=vagrant n=ansible | web1                       : ok=6    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2025-07-15 06:52:04,672 p=2911 u=vagrant n=ansible | [WARNING]: While constructing a mapping from /home/vagrant/ansible/example-6/dbplaybook.yml, line 16, column 9, found a duplicate dict key (msg). Using last defined value only.
+
+2025-07-15 06:52:04,772 p=2911 u=vagrant n=ansible | PLAY [Setup DB] *************************************************************************************************************************************************************************************************
+2025-07-15 06:52:04,790 p=2911 u=vagrant n=ansible | TASK [Gathering Facts] ******************************************************************************************************************************************************************************************
+2025-07-15 06:52:07,528 p=2911 u=vagrant n=ansible | ok: [web1]
+2025-07-15 06:52:07,568 p=2911 u=vagrant n=ansible | TASK [debug] ****************************************************************************************************************************************************************************************************
+2025-07-15 06:52:07,619 p=2911 u=vagrant n=ansible | ok: [web1] => {
+    "dbname": "devopsdb"
+}
+2025-07-15 06:52:07,631 p=2911 u=vagrant n=ansible | TASK [debug] ****************************************************************************************************************************************************************************************************
+2025-07-15 06:52:07,697 p=2911 u=vagrant n=ansible | ok: [web1] => {
+    "msg": "Value of dbname is Admin@123"
+}
+2025-07-15 06:52:07,707 p=2911 u=vagrant n=ansible | TASK [Install mysql server] *************************************************************************************************************************************************************************************
+2025-07-15 06:52:09,990 p=2911 u=vagrant n=ansible | ok: [web1]
+2025-07-15 06:52:10,004 p=2911 u=vagrant n=ansible | TASK [Start and enable mysql server] ****************************************************************************************************************************************************************************
+2025-07-15 06:52:11,052 p=2911 u=vagrant n=ansible | ok: [web1]
+2025-07-15 06:52:11,064 p=2911 u=vagrant n=ansible | TASK [Install python3-pymysql pkg] ******************************************************************************************************************************************************************************
+2025-07-15 06:52:12,985 p=2911 u=vagrant n=ansible | ok: [web1]
+2025-07-15 06:52:12,997 p=2911 u=vagrant n=ansible | TASK [Creat a new database with name 'devopsdb'] ****************************************************************************************************************************************************************
+2025-07-15 06:52:13,673 p=2911 u=vagrant n=ansible | ok: [web1]
+2025-07-15 06:52:13,682 p=2911 u=vagrant n=ansible | TASK [Crete a database user with name 'devops' and password 'Admin@123' with all database privileges] ***********************************************************************************************************
+2025-07-15 06:52:14,495 p=2911 u=vagrant n=ansible | [WARNING]: Module did not set no_log for update_password
+
+2025-07-15 06:52:14,500 p=2911 u=vagrant n=ansible | changed: [web1]
+2025-07-15 06:52:14,505 p=2911 u=vagrant n=ansible | PLAY RECAP ******************************************************************************************************************************************************************************************************
+2025-07-15 06:52:14,506 p=2911 u=vagrant n=ansible | web1                       : ok=8    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2025-07-15 06:53:38,408 p=3053 u=vagrant n=ansible | [WARNING]: While constructing a mapping from /home/vagrant/ansible/example-6/dbplaybook.yml, line 16, column 9, found a duplicate dict key (msg). Using last defined value only.
+
+2025-07-15 06:53:38,536 p=3053 u=vagrant n=ansible | PLAY [Setup DB] *************************************************************************************************************************************************************************************************
+2025-07-15 06:53:38,558 p=3053 u=vagrant n=ansible | TASK [Gathering Facts] ******************************************************************************************************************************************************************************************
+2025-07-15 06:53:41,267 p=3053 u=vagrant n=ansible | ok: [web1]
+2025-07-15 06:53:41,277 p=3053 u=vagrant n=ansible | TASK [debug] ****************************************************************************************************************************************************************************************************
+2025-07-15 06:53:41,326 p=3053 u=vagrant n=ansible | ok: [web1] => {
+    "dbname": "devopsdb"
+}
+2025-07-15 06:53:41,337 p=3053 u=vagrant n=ansible | TASK [debug] ****************************************************************************************************************************************************************************************************
+2025-07-15 06:53:41,392 p=3053 u=vagrant n=ansible | ok: [web1] => {
+    "msg": "Value of dbname is Admin@123"
+}
+2025-07-15 06:53:41,402 p=3053 u=vagrant n=ansible | TASK [Install mysql server] *************************************************************************************************************************************************************************************
+2025-07-15 06:53:43,509 p=3053 u=vagrant n=ansible | ok: [web1]
+2025-07-15 06:53:43,524 p=3053 u=vagrant n=ansible | TASK [Start and enable mysql server] ****************************************************************************************************************************************************************************
+2025-07-15 06:53:44,658 p=3053 u=vagrant n=ansible | ok: [web1]
+2025-07-15 06:53:44,667 p=3053 u=vagrant n=ansible | TASK [Install python3-pymysql pkg] ******************************************************************************************************************************************************************************
+2025-07-15 06:53:46,706 p=3053 u=vagrant n=ansible | ok: [web1]
+2025-07-15 06:53:46,717 p=3053 u=vagrant n=ansible | TASK [Creat a new database with name 'devopsdb'] ****************************************************************************************************************************************************************
+2025-07-15 06:53:47,484 p=3053 u=vagrant n=ansible | ok: [web1]
+2025-07-15 06:53:47,493 p=3053 u=vagrant n=ansible | TASK [Crete a database user with name 'devops' and password 'Admin@123' with all database privileges] ***********************************************************************************************************
+2025-07-15 06:53:48,294 p=3053 u=vagrant n=ansible | [WARNING]: Module did not set no_log for update_password
+
+2025-07-15 06:53:48,296 p=3053 u=vagrant n=ansible | changed: [web1]
+2025-07-15 06:53:48,299 p=3053 u=vagrant n=ansible | PLAY RECAP ******************************************************************************************************************************************************************************************************
+2025-07-15 06:53:48,300 p=3053 u=vagrant n=ansible | web1                       : ok=8    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2025-07-15 06:54:33,986 p=3166 u=vagrant n=ansible | ERROR! Syntax Error while loading YAML.
+  found character that cannot start any token
+
+The error appears to be in '/home/vagrant/ansible/example-6/dbplaybook.yml': line 20, column 1, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+    - debug:
+	msg: "Value of dbname is {{dbpass}}"
+^ here
+There appears to be a tab character at the start of the line.
+
+YAML does not use tabs for formatting. Tabs should be replaced with spaces.
+
+For example:
+    - name: update tooling
+      vars:
+        version: 1.2.3
+#    ^--- there is a tab there.
+
+Should be written as:
+    - name: update tooling
+      vars:
+        version: 1.2.3
+# ^--- all spaces here.
+We could be wrong, but this one looks like it might be an issue with
+missing quotes. Always quote template expression brackets when they
+start a value. For instance:
+
+    with_items:
+      - {{ foo }}
+
+Should be written as:
+
+    with_items:
+      - "{{ foo }}"
+
+2025-07-15 06:55:22,028 p=3174 u=vagrant n=ansible | ERROR! Syntax Error while loading YAML.
+  found character that cannot start any token
+
+The error appears to be in '/home/vagrant/ansible/example-6/dbplaybook.yml': line 20, column 1, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+    - debug:
+	msg: "Value of dbname is {{dbpass}}"
+^ here
+There appears to be a tab character at the start of the line.
+
+YAML does not use tabs for formatting. Tabs should be replaced with spaces.
+
+For example:
+    - name: update tooling
+      vars:
+        version: 1.2.3
+#    ^--- there is a tab there.
+
+Should be written as:
+    - name: update tooling
+      vars:
+        version: 1.2.3
+# ^--- all spaces here.
+We could be wrong, but this one looks like it might be an issue with
+missing quotes. Always quote template expression brackets when they
+start a value. For instance:
+
+    with_items:
+      - {{ foo }}
+
+Should be written as:
+
+    with_items:
+      - "{{ foo }}"
+
+2025-07-15 06:55:46,328 p=3178 u=vagrant n=ansible | PLAY [Setup DB] *************************************************************************************************************************************************************************************************
+2025-07-15 06:55:46,348 p=3178 u=vagrant n=ansible | TASK [Gathering Facts] ******************************************************************************************************************************************************************************************
+2025-07-15 06:55:49,014 p=3178 u=vagrant n=ansible | ok: [web1]
+2025-07-15 06:55:49,024 p=3178 u=vagrant n=ansible | TASK [debug] ****************************************************************************************************************************************************************************************************
+2025-07-15 06:55:49,077 p=3178 u=vagrant n=ansible | ok: [web1] => {
+    "dbname": "devopsdb"
+}
+2025-07-15 06:55:49,086 p=3178 u=vagrant n=ansible | TASK [debug] ****************************************************************************************************************************************************************************************************
+2025-07-15 06:55:49,132 p=3178 u=vagrant n=ansible | ok: [web1] => {
+    "msg": "Value of dbname is devopsdb"
+}
+2025-07-15 06:55:49,144 p=3178 u=vagrant n=ansible | TASK [debug] ****************************************************************************************************************************************************************************************************
+2025-07-15 06:55:49,194 p=3178 u=vagrant n=ansible | ok: [web1] => {
+    "msg": "Value of dbname is devops"
+}
+2025-07-15 06:55:49,202 p=3178 u=vagrant n=ansible | TASK [debug] ****************************************************************************************************************************************************************************************************
+2025-07-15 06:55:49,248 p=3178 u=vagrant n=ansible | ok: [web1] => {
+    "msg": "Value of dbname is Admin@123"
+}
+2025-07-15 06:55:49,259 p=3178 u=vagrant n=ansible | TASK [Install mysql server] *************************************************************************************************************************************************************************************
+2025-07-15 06:55:51,566 p=3178 u=vagrant n=ansible | ok: [web1]
+2025-07-15 06:55:51,575 p=3178 u=vagrant n=ansible | TASK [Start and enable mysql server] ****************************************************************************************************************************************************************************
+2025-07-15 06:55:52,633 p=3178 u=vagrant n=ansible | ok: [web1]
+2025-07-15 06:55:52,642 p=3178 u=vagrant n=ansible | TASK [Install python3-pymysql pkg] ******************************************************************************************************************************************************************************
+2025-07-15 06:55:54,576 p=3178 u=vagrant n=ansible | ok: [web1]
+2025-07-15 06:55:54,585 p=3178 u=vagrant n=ansible | TASK [Creat a new database with name 'devopsdb'] ****************************************************************************************************************************************************************
+2025-07-15 06:55:55,271 p=3178 u=vagrant n=ansible | ok: [web1]
+2025-07-15 06:55:55,280 p=3178 u=vagrant n=ansible | TASK [Crete a database user with name 'devops' and password 'Admin@123' with all database privileges] ***********************************************************************************************************
+2025-07-15 06:55:56,105 p=3178 u=vagrant n=ansible | [WARNING]: Module did not set no_log for update_password
+
+2025-07-15 06:55:56,106 p=3178 u=vagrant n=ansible | changed: [web1]
+2025-07-15 06:55:56,111 p=3178 u=vagrant n=ansible | PLAY RECAP ******************************************************************************************************************************************************************************************************
+2025-07-15 06:55:56,111 p=3178 u=vagrant n=ansible | web1                       : ok=10   changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   

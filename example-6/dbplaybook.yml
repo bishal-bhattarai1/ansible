@@ -1,0 +1,52 @@
+---
+
+- name: Setup DB
+  hosts: dbservergrp
+  become: true
+  vars:
+   dbname: devopsdb
+   dbuser: devops
+   dbpass: Admin@123
+
+  tasks:
+    - debug:
+       var: dbname
+    
+    - debug:
+        msg: "Value of dbname is {{dbname}}"
+    - debug:
+        msg: "Value of dbname is {{dbuser}}"
+    - debug:    
+        msg: "Value of dbname is {{dbpass}}"
+    
+    - name: Install mysql server 
+      apt:
+        name: mysql-server
+        state: present
+
+    - name: Start and enable mysql server
+      service:
+        name: mysql
+        state: started
+        enabled: yes
+
+    - name: Install python3-pymysql pkg
+      apt:
+       name: python3-pymysql
+       state: present 
+
+    - name: Creat a new database with name 'devopsdb'
+      mysql_db:
+        name: '{{dbname}}'
+        state: present
+        login_unix_socket: /run/mysqld/mysqld.sock    
+
+
+    - name: Crete a database user with name 'devops' and password 'Admin@123' with all database privileges
+      mysql_user:
+        name: '{{dbuser}}'
+        password: '{{dbpass}}'
+        priv: '*.*:ALL'
+        state: present  
+        login_unix_socket: /run/mysqld/mysqld.sock
+
