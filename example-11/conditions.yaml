@@ -1,0 +1,63 @@
+---
+
+- name: Conditions Practice
+  hosts: all
+  become: true
+  tasks:
+    - name: Install pkg
+      apt:
+        name: "{{item}}"
+        state: present
+      when: ansible_distribution == "Ubuntu"
+      loop:
+        - apache2 
+        - git
+        - wget
+        - chrony
+
+
+    - name: Install pkg
+      yum:
+        name: "{{item}}"
+        state: present
+      when: ansible_distribution == "CentOS"
+      loop:
+        - chrony
+        - mariadb-server
+      
+    - name: Start chrony service
+      service:
+        name: chronyd
+        state: started
+        enabled: yes
+
+    - name: Updated Chrony conf on Ubuntu
+      template:
+        src: templates/ubunut-chrony.conf.j2
+        dest: /etc/chrony/chrony.conf
+      when: ansible_distribution == "Ubuntu"
+   
+    - name: Updated Chrony conf on CentOs
+      template:
+        src: templates/centos-chrony.conf.j2
+        dest: /etc/chrony.conf
+      when: ansible_distribution == "CentOS"
+
+    - name: Restart chrony service
+      service:
+        name: chronyd
+        state: restarted
+        
+    
+    - name: Add Group
+      group:
+        name: devopsgrp
+        state: present
+
+    - name: Add User devopsgrp
+      user:
+        name: "{{item}}"
+        group: devopsgrp
+      loop: "{{usernames}}"
+
+
