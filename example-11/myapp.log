@@ -1304,149 +1304,82 @@ The offending line appears to be:
 2025-07-16 06:33:21,531 p=2871 u=vagrant n=ansible | PLAY RECAP *************************************************************************************************************
 2025-07-16 06:33:21,532 p=2871 u=vagrant n=ansible | web                        : ok=4    changed=1    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
 2025-07-16 06:33:21,532 p=2871 u=vagrant n=ansible | web1                       : ok=4    changed=1    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
-2025-07-16 09:08:20,980 p=1949 u=vagrant n=ansible | ERROR! couldn't resolve module/action 'templates'. This often indicates a misspelling, missing collection, or incorrect module path.
+2025-07-16 12:24:17,288 p=1456 u=vagrant n=ansible | ERROR! conflicting action statements: become:_user, linefile
 
-The error appears to be in '/home/vagrant/ansible/example-11/conditions.yaml': line 34, column 7, but may
+The error appears to be in '/home/vagrant/ansible/example-11/conditions.yaml': line 56, column 7, but may
 be elsewhere in the file depending on the exact syntax problem.
 
 The offending line appears to be:
 
 
-    - name: Updated Chrony conf on Ubuntu
+    - name: Updated sshd_config for ssh Banner
       ^ here
 
-2025-07-16 09:09:36,388 p=1962 u=vagrant n=ansible | PLAY [Conditions Practice] *********************************************************************************************
-2025-07-16 09:09:36,453 p=1962 u=vagrant n=ansible | TASK [Gathering Facts] *************************************************************************************************
-2025-07-16 09:09:43,215 p=1962 u=vagrant n=ansible | ok: [web]
-2025-07-16 09:09:44,634 p=1962 u=vagrant n=ansible | ok: [web1]
-2025-07-16 09:09:44,659 p=1962 u=vagrant n=ansible | TASK [Install pkg] *****************************************************************************************************
-2025-07-16 09:09:44,768 p=1962 u=vagrant n=ansible | skipping: [web1] => (item=apache2) 
-2025-07-16 09:09:44,780 p=1962 u=vagrant n=ansible | skipping: [web1] => (item=git) 
-2025-07-16 09:09:44,784 p=1962 u=vagrant n=ansible | skipping: [web1] => (item=wget) 
-2025-07-16 09:09:44,792 p=1962 u=vagrant n=ansible | skipping: [web1] => (item=chrony) 
-2025-07-16 09:09:49,000 p=1962 u=vagrant n=ansible | ok: [web] => (item=apache2)
-2025-07-16 09:09:51,223 p=1962 u=vagrant n=ansible | ok: [web] => (item=git)
-2025-07-16 09:09:53,145 p=1962 u=vagrant n=ansible | ok: [web] => (item=wget)
-2025-07-16 09:09:54,875 p=1962 u=vagrant n=ansible | ok: [web] => (item=chrony)
-2025-07-16 09:09:54,885 p=1962 u=vagrant n=ansible | TASK [Install pkg] *****************************************************************************************************
-2025-07-16 09:09:54,946 p=1962 u=vagrant n=ansible | skipping: [web] => (item=chrony) 
-2025-07-16 09:09:54,948 p=1962 u=vagrant n=ansible | skipping: [web] => (item=mariadb-server) 
-2025-07-16 09:10:04,746 p=1962 u=vagrant n=ansible | ok: [web1] => (item=chrony)
-2025-07-16 09:10:07,802 p=1962 u=vagrant n=ansible | ok: [web1] => (item=mariadb-server)
-2025-07-16 09:10:07,845 p=1962 u=vagrant n=ansible | TASK [Start chrony service] ********************************************************************************************
-2025-07-16 09:10:09,098 p=1962 u=vagrant n=ansible | ok: [web]
-2025-07-16 09:10:09,678 p=1962 u=vagrant n=ansible | ok: [web1]
-2025-07-16 09:10:09,704 p=1962 u=vagrant n=ansible | TASK [Updated Chrony conf on Ubuntu] ***********************************************************************************
-2025-07-16 09:10:09,784 p=1962 u=vagrant n=ansible | skipping: [web1]
-2025-07-16 09:10:11,091 p=1962 u=vagrant n=ansible | changed: [web]
-2025-07-16 09:10:11,099 p=1962 u=vagrant n=ansible | TASK [Updated Chrony conf on CentOs] ***********************************************************************************
-2025-07-16 09:10:11,147 p=1962 u=vagrant n=ansible | skipping: [web]
-2025-07-16 09:10:11,171 p=1962 u=vagrant n=ansible | skipping: [web1]
-2025-07-16 09:10:11,182 p=1962 u=vagrant n=ansible | TASK [Restart chrony service] ******************************************************************************************
-2025-07-16 09:10:12,435 p=1962 u=vagrant n=ansible | changed: [web]
-2025-07-16 09:10:13,120 p=1962 u=vagrant n=ansible | changed: [web1]
-2025-07-16 09:10:13,130 p=1962 u=vagrant n=ansible | TASK [Add Group] *******************************************************************************************************
-2025-07-16 09:10:13,839 p=1962 u=vagrant n=ansible | ok: [web]
-2025-07-16 09:10:14,313 p=1962 u=vagrant n=ansible | ok: [web1]
-2025-07-16 09:10:14,319 p=1962 u=vagrant n=ansible | TASK [Add User devopsgrp] **********************************************************************************************
-2025-07-16 09:10:15,207 p=1962 u=vagrant n=ansible | ok: [web] => (item=user1)
-2025-07-16 09:10:15,703 p=1962 u=vagrant n=ansible | ok: [web] => (item=user2)
-2025-07-16 09:10:15,855 p=1962 u=vagrant n=ansible | ok: [web1] => (item=user1)
-2025-07-16 09:10:16,268 p=1962 u=vagrant n=ansible | ok: [web] => (item=user3)
-2025-07-16 09:10:16,812 p=1962 u=vagrant n=ansible | ok: [web] => (item=user4)
-2025-07-16 09:10:17,130 p=1962 u=vagrant n=ansible | ok: [web1] => (item=user2)
-2025-07-16 09:10:18,339 p=1962 u=vagrant n=ansible | ok: [web1] => (item=user3)
-2025-07-16 09:10:19,594 p=1962 u=vagrant n=ansible | ok: [web1] => (item=user4)
-2025-07-16 09:10:19,598 p=1962 u=vagrant n=ansible | PLAY RECAP *************************************************************************************************************
-2025-07-16 09:10:19,599 p=1962 u=vagrant n=ansible | web                        : ok=7    changed=2    unreachable=0    failed=0    skipped=2    rescued=0    ignored=0   
-2025-07-16 09:10:19,599 p=1962 u=vagrant n=ansible | web1                       : ok=6    changed=1    unreachable=0    failed=0    skipped=3    rescued=0    ignored=0   
-2025-07-16 09:10:47,855 p=2352 u=vagrant n=ansible | PLAY [Conditions Practice] **************************************************************************************************************************************************************************************
-2025-07-16 09:10:47,879 p=2352 u=vagrant n=ansible | TASK [Gathering Facts] ******************************************************************************************************************************************************************************************
-2025-07-16 09:10:50,075 p=2352 u=vagrant n=ansible | ok: [web]
-2025-07-16 09:10:50,988 p=2352 u=vagrant n=ansible | ok: [web1]
-2025-07-16 09:10:51,031 p=2352 u=vagrant n=ansible | TASK [Install pkg] **********************************************************************************************************************************************************************************************
-2025-07-16 09:10:51,130 p=2352 u=vagrant n=ansible | skipping: [web1] => (item=apache2) 
-2025-07-16 09:10:51,132 p=2352 u=vagrant n=ansible | skipping: [web1] => (item=git) 
-2025-07-16 09:10:51,132 p=2352 u=vagrant n=ansible | skipping: [web1] => (item=wget) 
-2025-07-16 09:10:51,132 p=2352 u=vagrant n=ansible | skipping: [web1] => (item=chrony) 
-2025-07-16 09:10:53,330 p=2352 u=vagrant n=ansible | ok: [web] => (item=apache2)
-2025-07-16 09:10:55,299 p=2352 u=vagrant n=ansible | ok: [web] => (item=git)
-2025-07-16 09:10:57,382 p=2352 u=vagrant n=ansible | ok: [web] => (item=wget)
-2025-07-16 09:10:59,509 p=2352 u=vagrant n=ansible | ok: [web] => (item=chrony)
-2025-07-16 09:10:59,523 p=2352 u=vagrant n=ansible | TASK [Install pkg] **********************************************************************************************************************************************************************************************
-2025-07-16 09:10:59,592 p=2352 u=vagrant n=ansible | skipping: [web] => (item=chrony) 
-2025-07-16 09:10:59,595 p=2352 u=vagrant n=ansible | skipping: [web] => (item=mariadb-server) 
-2025-07-16 09:11:02,538 p=2352 u=vagrant n=ansible | ok: [web1] => (item=chrony)
-2025-07-16 09:11:05,424 p=2352 u=vagrant n=ansible | ok: [web1] => (item=mariadb-server)
-2025-07-16 09:11:05,437 p=2352 u=vagrant n=ansible | TASK [Start chrony service] *************************************************************************************************************************************************************************************
-2025-07-16 09:11:06,594 p=2352 u=vagrant n=ansible | ok: [web]
-2025-07-16 09:11:07,247 p=2352 u=vagrant n=ansible | ok: [web1]
-2025-07-16 09:11:07,257 p=2352 u=vagrant n=ansible | TASK [Updated Chrony conf on Ubuntu] ****************************************************************************************************************************************************************************
-2025-07-16 09:11:07,348 p=2352 u=vagrant n=ansible | skipping: [web1]
-2025-07-16 09:11:08,552 p=2352 u=vagrant n=ansible | ok: [web]
-2025-07-16 09:11:08,562 p=2352 u=vagrant n=ansible | TASK [Updated Chrony conf on CentOs] ****************************************************************************************************************************************************************************
-2025-07-16 09:11:08,640 p=2352 u=vagrant n=ansible | skipping: [web]
-2025-07-16 09:11:11,527 p=2352 u=vagrant n=ansible | changed: [web1]
-2025-07-16 09:11:11,536 p=2352 u=vagrant n=ansible | TASK [Restart chrony service] ***********************************************************************************************************************************************************************************
-2025-07-16 09:11:12,587 p=2352 u=vagrant n=ansible | changed: [web]
-2025-07-16 09:11:13,504 p=2352 u=vagrant n=ansible | changed: [web1]
-2025-07-16 09:11:13,515 p=2352 u=vagrant n=ansible | TASK [Add Group] ************************************************************************************************************************************************************************************************
-2025-07-16 09:11:14,232 p=2352 u=vagrant n=ansible | ok: [web]
-2025-07-16 09:11:14,758 p=2352 u=vagrant n=ansible | ok: [web1]
-2025-07-16 09:11:14,765 p=2352 u=vagrant n=ansible | TASK [Add User devopsgrp] ***************************************************************************************************************************************************************************************
-2025-07-16 09:11:15,751 p=2352 u=vagrant n=ansible | ok: [web] => (item=user1)
-2025-07-16 09:11:16,344 p=2352 u=vagrant n=ansible | ok: [web] => (item=user2)
-2025-07-16 09:11:16,484 p=2352 u=vagrant n=ansible | ok: [web1] => (item=user1)
-2025-07-16 09:11:17,008 p=2352 u=vagrant n=ansible | ok: [web] => (item=user3)
-2025-07-16 09:11:17,592 p=2352 u=vagrant n=ansible | ok: [web] => (item=user4)
-2025-07-16 09:11:17,993 p=2352 u=vagrant n=ansible | ok: [web1] => (item=user2)
-2025-07-16 09:11:19,360 p=2352 u=vagrant n=ansible | ok: [web1] => (item=user3)
-2025-07-16 09:11:20,614 p=2352 u=vagrant n=ansible | ok: [web1] => (item=user4)
-2025-07-16 09:11:20,620 p=2352 u=vagrant n=ansible | PLAY RECAP ******************************************************************************************************************************************************************************************************
-2025-07-16 09:11:20,622 p=2352 u=vagrant n=ansible | web                        : ok=7    changed=1    unreachable=0    failed=0    skipped=2    rescued=0    ignored=0   
-2025-07-16 09:11:20,622 p=2352 u=vagrant n=ansible | web1                       : ok=7    changed=2    unreachable=0    failed=0    skipped=2    rescued=0    ignored=0   
-2025-07-16 09:18:23,840 p=2793 u=vagrant n=ansible | PLAY [Conditions Practice] **************************************************************************************************************************************************************************************
-2025-07-16 09:18:23,908 p=2793 u=vagrant n=ansible | TASK [Gathering Facts] ******************************************************************************************************************************************************************************************
-2025-07-16 09:18:30,509 p=2793 u=vagrant n=ansible | ok: [web]
-2025-07-16 09:18:32,465 p=2793 u=vagrant n=ansible | ok: [web1]
-2025-07-16 09:18:32,474 p=2793 u=vagrant n=ansible | TASK [Install pkg] **********************************************************************************************************************************************************************************************
-2025-07-16 09:18:32,576 p=2793 u=vagrant n=ansible | skipping: [web1] => (item=apache2) 
-2025-07-16 09:18:32,577 p=2793 u=vagrant n=ansible | skipping: [web1] => (item=git) 
-2025-07-16 09:18:32,577 p=2793 u=vagrant n=ansible | skipping: [web1] => (item=wget) 
-2025-07-16 09:18:32,578 p=2793 u=vagrant n=ansible | skipping: [web1] => (item=chrony) 
-2025-07-16 09:18:37,136 p=2793 u=vagrant n=ansible | ok: [web] => (item=apache2)
-2025-07-16 09:18:39,552 p=2793 u=vagrant n=ansible | ok: [web] => (item=git)
-2025-07-16 09:18:42,276 p=2793 u=vagrant n=ansible | ok: [web] => (item=wget)
-2025-07-16 09:18:44,741 p=2793 u=vagrant n=ansible | ok: [web] => (item=chrony)
-2025-07-16 09:18:44,811 p=2793 u=vagrant n=ansible | TASK [Install pkg] **********************************************************************************************************************************************************************************************
-2025-07-16 09:18:45,015 p=2793 u=vagrant n=ansible | skipping: [web] => (item=chrony) 
-2025-07-16 09:18:45,019 p=2793 u=vagrant n=ansible | skipping: [web] => (item=mariadb-server) 
-2025-07-16 09:18:58,199 p=2793 u=vagrant n=ansible | ok: [web1] => (item=chrony)
-2025-07-16 09:19:02,369 p=2793 u=vagrant n=ansible | ok: [web1] => (item=mariadb-server)
-2025-07-16 09:19:02,402 p=2793 u=vagrant n=ansible | TASK [Start chrony service] *************************************************************************************************************************************************************************************
-2025-07-16 09:19:04,476 p=2793 u=vagrant n=ansible | ok: [web]
-2025-07-16 09:19:05,042 p=2793 u=vagrant n=ansible | ok: [web1]
-2025-07-16 09:19:05,056 p=2793 u=vagrant n=ansible | TASK [Updated Chrony conf on Ubuntu] ****************************************************************************************************************************************************************************
-2025-07-16 09:19:05,137 p=2793 u=vagrant n=ansible | skipping: [web1]
-2025-07-16 09:19:06,533 p=2793 u=vagrant n=ansible | ok: [web]
-2025-07-16 09:19:06,542 p=2793 u=vagrant n=ansible | TASK [Updated Chrony conf on CentOs] ****************************************************************************************************************************************************************************
-2025-07-16 09:19:06,614 p=2793 u=vagrant n=ansible | skipping: [web]
-2025-07-16 09:19:09,334 p=2793 u=vagrant n=ansible | changed: [web1]
-2025-07-16 09:19:09,346 p=2793 u=vagrant n=ansible | TASK [Restart chrony service] ***********************************************************************************************************************************************************************************
-2025-07-16 09:19:10,928 p=2793 u=vagrant n=ansible | changed: [web]
-2025-07-16 09:19:11,698 p=2793 u=vagrant n=ansible | changed: [web1]
-2025-07-16 09:19:11,707 p=2793 u=vagrant n=ansible | TASK [Add Group] ************************************************************************************************************************************************************************************************
-2025-07-16 09:19:12,468 p=2793 u=vagrant n=ansible | ok: [web]
-2025-07-16 09:19:12,965 p=2793 u=vagrant n=ansible | ok: [web1]
-2025-07-16 09:19:12,974 p=2793 u=vagrant n=ansible | TASK [Add User devopsgrp] ***************************************************************************************************************************************************************************************
-2025-07-16 09:19:13,957 p=2793 u=vagrant n=ansible | ok: [web] => (item=user1)
-2025-07-16 09:19:14,538 p=2793 u=vagrant n=ansible | ok: [web] => (item=user2)
-2025-07-16 09:19:14,616 p=2793 u=vagrant n=ansible | ok: [web1] => (item=user1)
-2025-07-16 09:19:15,241 p=2793 u=vagrant n=ansible | ok: [web] => (item=user3)
-2025-07-16 09:19:15,853 p=2793 u=vagrant n=ansible | ok: [web] => (item=user4)
-2025-07-16 09:19:16,211 p=2793 u=vagrant n=ansible | ok: [web1] => (item=user2)
-2025-07-16 09:19:17,555 p=2793 u=vagrant n=ansible | ok: [web1] => (item=user3)
-2025-07-16 09:19:18,791 p=2793 u=vagrant n=ansible | ok: [web1] => (item=user4)
-2025-07-16 09:19:18,799 p=2793 u=vagrant n=ansible | PLAY RECAP ******************************************************************************************************************************************************************************************************
-2025-07-16 09:19:18,801 p=2793 u=vagrant n=ansible | web                        : ok=7    changed=1    unreachable=0    failed=0    skipped=2    rescued=0    ignored=0   
-2025-07-16 09:19:18,802 p=2793 u=vagrant n=ansible | web1                       : ok=7    changed=2    unreachable=0    failed=0    skipped=2    rescued=0    ignored=0   
+2025-07-16 12:24:46,265 p=1479 u=vagrant n=ansible | ERROR! couldn't resolve module/action 'linefile'. This often indicates a misspelling, missing collection, or incorrect module path.
+
+The error appears to be in '/home/vagrant/ansible/example-11/conditions.yaml': line 56, column 7, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+
+    - name: Updated sshd_config for ssh Banner
+      ^ here
+
+2025-07-16 12:25:17,088 p=1488 u=vagrant n=ansible | PLAY [Conditions Practice] *********************************************************************************************
+2025-07-16 12:25:17,183 p=1488 u=vagrant n=ansible | TASK [Gathering Facts] *************************************************************************************************
+2025-07-16 12:25:26,012 p=1488 u=vagrant n=ansible | ok: [web]
+2025-07-16 12:25:28,125 p=1488 u=vagrant n=ansible | ok: [web1]
+2025-07-16 12:25:28,137 p=1488 u=vagrant n=ansible | TASK [Install pkg] *****************************************************************************************************
+2025-07-16 12:25:28,349 p=1488 u=vagrant n=ansible | skipping: [web1] => (item=apache2) 
+2025-07-16 12:25:28,366 p=1488 u=vagrant n=ansible | skipping: [web1] => (item=git) 
+2025-07-16 12:25:28,367 p=1488 u=vagrant n=ansible | skipping: [web1] => (item=wget) 
+2025-07-16 12:25:28,369 p=1488 u=vagrant n=ansible | skipping: [web1] => (item=chrony) 
+2025-07-16 12:25:32,893 p=1488 u=vagrant n=ansible | ok: [web] => (item=apache2)
+2025-07-16 12:25:35,366 p=1488 u=vagrant n=ansible | ok: [web] => (item=git)
+2025-07-16 12:25:37,623 p=1488 u=vagrant n=ansible | ok: [web] => (item=wget)
+2025-07-16 12:25:39,764 p=1488 u=vagrant n=ansible | ok: [web] => (item=chrony)
+2025-07-16 12:25:39,797 p=1488 u=vagrant n=ansible | TASK [Install pkg] *****************************************************************************************************
+2025-07-16 12:25:39,906 p=1488 u=vagrant n=ansible | skipping: [web] => (item=chrony) 
+2025-07-16 12:25:39,908 p=1488 u=vagrant n=ansible | skipping: [web] => (item=mariadb-server) 
+2025-07-16 12:25:51,317 p=1488 u=vagrant n=ansible | ok: [web1] => (item=chrony)
+2025-07-16 12:25:56,120 p=1488 u=vagrant n=ansible | ok: [web1] => (item=mariadb-server)
+2025-07-16 12:25:56,220 p=1488 u=vagrant n=ansible | TASK [Start chrony service] ********************************************************************************************
+2025-07-16 12:25:59,230 p=1488 u=vagrant n=ansible | ok: [web]
+2025-07-16 12:25:59,270 p=1488 u=vagrant n=ansible | ok: [web1]
+2025-07-16 12:25:59,284 p=1488 u=vagrant n=ansible | TASK [Updated Chrony conf on Ubuntu] ***********************************************************************************
+2025-07-16 12:25:59,358 p=1488 u=vagrant n=ansible | skipping: [web1]
+2025-07-16 12:26:00,655 p=1488 u=vagrant n=ansible | ok: [web]
+2025-07-16 12:26:00,663 p=1488 u=vagrant n=ansible | TASK [Updated Chrony conf on CentOs] ***********************************************************************************
+2025-07-16 12:26:00,721 p=1488 u=vagrant n=ansible | skipping: [web]
+2025-07-16 12:26:02,611 p=1488 u=vagrant n=ansible | ok: [web1]
+2025-07-16 12:26:02,622 p=1488 u=vagrant n=ansible | TASK [Restart chrony service] ******************************************************************************************
+2025-07-16 12:26:04,254 p=1488 u=vagrant n=ansible | changed: [web]
+2025-07-16 12:26:04,777 p=1488 u=vagrant n=ansible | changed: [web1]
+2025-07-16 12:26:04,790 p=1488 u=vagrant n=ansible | TASK [Add ssh Banner] **************************************************************************************************
+2025-07-16 12:26:06,029 p=1488 u=vagrant n=ansible | changed: [web]
+2025-07-16 12:26:07,204 p=1488 u=vagrant n=ansible | changed: [web1]
+2025-07-16 12:26:07,213 p=1488 u=vagrant n=ansible | TASK [Updated sshd_config for ssh Banner] ******************************************************************************
+2025-07-16 12:26:07,938 p=1488 u=vagrant n=ansible | changed: [web]
+2025-07-16 12:26:08,381 p=1488 u=vagrant n=ansible | changed: [web1]
+2025-07-16 12:26:08,388 p=1488 u=vagrant n=ansible | TASK [Restart sshd service] ********************************************************************************************
+2025-07-16 12:26:08,454 p=1488 u=vagrant n=ansible | skipping: [web]
+2025-07-16 12:26:10,048 p=1488 u=vagrant n=ansible | changed: [web1]
+2025-07-16 12:26:10,058 p=1488 u=vagrant n=ansible | TASK [Restart ssh service] *********************************************************************************************
+2025-07-16 12:26:10,138 p=1488 u=vagrant n=ansible | skipping: [web1]
+2025-07-16 12:26:11,074 p=1488 u=vagrant n=ansible | changed: [web]
+2025-07-16 12:26:11,087 p=1488 u=vagrant n=ansible | TASK [Add Group] *******************************************************************************************************
+2025-07-16 12:26:11,844 p=1488 u=vagrant n=ansible | ok: [web]
+2025-07-16 12:26:12,304 p=1488 u=vagrant n=ansible | ok: [web1]
+2025-07-16 12:26:12,313 p=1488 u=vagrant n=ansible | TASK [Add User devopsgrp] **********************************************************************************************
+2025-07-16 12:26:13,281 p=1488 u=vagrant n=ansible | ok: [web] => (item=user1)
+2025-07-16 12:26:13,865 p=1488 u=vagrant n=ansible | ok: [web1] => (item=user1)
+2025-07-16 12:26:13,879 p=1488 u=vagrant n=ansible | ok: [web] => (item=user2)
+2025-07-16 12:26:14,480 p=1488 u=vagrant n=ansible | ok: [web] => (item=user3)
+2025-07-16 12:26:15,061 p=1488 u=vagrant n=ansible | ok: [web] => (item=user4)
+2025-07-16 12:26:15,234 p=1488 u=vagrant n=ansible | ok: [web1] => (item=user2)
+2025-07-16 12:26:16,439 p=1488 u=vagrant n=ansible | ok: [web1] => (item=user3)
+2025-07-16 12:26:17,703 p=1488 u=vagrant n=ansible | ok: [web1] => (item=user4)
+2025-07-16 12:26:17,715 p=1488 u=vagrant n=ansible | PLAY RECAP *************************************************************************************************************
+2025-07-16 12:26:17,716 p=1488 u=vagrant n=ansible | web                        : ok=10   changed=4    unreachable=0    failed=0    skipped=3    rescued=0    ignored=0   
+2025-07-16 12:26:17,717 p=1488 u=vagrant n=ansible | web1                       : ok=10   changed=4    unreachable=0    failed=0    skipped=3    rescued=0    ignored=0   

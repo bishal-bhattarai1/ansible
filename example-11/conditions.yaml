@@ -48,7 +48,32 @@
         name: chronyd
         state: restarted
         
+    - name: Add ssh Banner
+      copy:
+       content: "Attentation! this {{ansible_distribution}} is managed by Ansible, if you are not authorized, pelase exit !!! /n"
+       dest: /etc/banner.txt
     
+    - name: Updated sshd_config for ssh Banner
+      become: yes
+      become_user: root
+      lineinfile:
+        path: /etc/ssh/sshd_config
+        regexp: "#Banner none"
+        line: "Banner /etc/banner.txt"
+        state: present
+
+    - name: Restart sshd service
+      service:
+        name: sshd
+        state: restarted
+      when: ansible_distribution == "CentOS"
+  
+    - name: Restart ssh service
+      service:
+        name: ssh
+        state: restarted
+      when: ansible_distribution == "Ubuntu"
+
     - name: Add Group
       group:
         name: devopsgrp
