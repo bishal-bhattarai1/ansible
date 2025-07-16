@@ -1,0 +1,14 @@
+---
+
+- name: facts Collection
+  hosts: web
+  become: true
+  tasks:
+    - name: get os distribution
+      debug:
+        var: ansible_distribution
+
+
+    - name: get memory info
+      debug:
+        var: ansible_memory_mb  
