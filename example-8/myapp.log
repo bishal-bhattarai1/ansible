@@ -1137,3 +1137,32 @@ The offending line appears to be:
 }
 2025-07-16 03:11:01,680 p=1602 u=vagrant n=ansible | PLAY RECAP *************************************************************************************************************
 2025-07-16 03:11:01,681 p=1602 u=vagrant n=ansible | web                        : ok=3    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2025-07-16 03:17:39,001 p=1781 u=vagrant n=ansible | PLAY [facts Collection] ************************************************************************************************
+2025-07-16 03:17:39,041 p=1781 u=vagrant n=ansible | TASK [Gathering Facts] *************************************************************************************************
+2025-07-16 03:17:44,148 p=1781 u=vagrant n=ansible | ok: [web]
+2025-07-16 03:17:44,161 p=1781 u=vagrant n=ansible | TASK [get os distribution] *********************************************************************************************
+2025-07-16 03:17:44,234 p=1781 u=vagrant n=ansible | ok: [web] => {
+    "ansible_distribution": "Ubuntu"
+}
+2025-07-16 03:17:44,247 p=1781 u=vagrant n=ansible | TASK [get memory info] *************************************************************************************************
+2025-07-16 03:17:44,317 p=1781 u=vagrant n=ansible | ok: [web] => {
+    "ansible_memory_mb": {
+        "nocache": {
+            "free": 824,
+            "used": 161
+        },
+        "real": {
+            "free": 637,
+            "total": 985,
+            "used": 348
+        },
+        "swap": {
+            "cached": 0,
+            "free": 1952,
+            "total": 1952,
+            "used": 0
+        }
+    }
+}
+2025-07-16 03:17:44,325 p=1781 u=vagrant n=ansible | PLAY RECAP *************************************************************************************************************
+2025-07-16 03:17:44,326 p=1781 u=vagrant n=ansible | web                        : ok=3    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
