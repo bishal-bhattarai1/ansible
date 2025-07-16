@@ -1,0 +1,36 @@
+---
+
+- name: Conditions Practice
+  hosts: all
+  become: true
+  tasks:
+    - name: Install pkg
+      apt:
+        name: "{{item}}"
+        state: present
+      when: ansible_distribution == "Ubuntu"
+      loop:
+        - apache2 
+        - git
+        - wget
+        - chrony
+
+
+    - name: Install pkg
+      yum:
+        name: mariadb-server
+        state: present
+      when: ansible_distribution == "CentOS"
+
+    - name: Add Group
+      group:
+        name: devopsgrp
+        state: present
+
+    - name: Add User devopsgrp
+      user:
+        name: "{{item}}"
+        group: devopsgrp
+      loop: "{{usernames}}"
+
+
