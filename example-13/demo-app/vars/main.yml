@@ -1,0 +1,9 @@
+---
+# vars file for demo-app
+
+dbname: devopsgrp
+dbuser: devops
+dbpass: Admin@123
+
+
+course: DevOps

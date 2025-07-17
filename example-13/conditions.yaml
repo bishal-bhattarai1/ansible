@@ -1,0 +1,7 @@
+---
+
+- name: Conditions Practice
+  hosts: all
+  become: true
+  roles: 
+    - demo-app

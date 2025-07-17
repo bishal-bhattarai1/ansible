@@ -1,0 +1,85 @@
+---
+# tasks file for demo-app
+
+- name: Install pkg
+  apt:
+    name: "{{item}}"
+    state: present
+  when: ansible_distribution == "Ubuntu"
+  loop:
+    - apache2
+    - git
+    - wget
+    - chrony
+
+
+- name: Install pkg
+  yum:
+    name: "{{item}}"
+    state: present
+  when: ansible_distribution == "CentOS"
+  loop:
+    - chrony
+    - mariadb-server
+
+- name: Start chrony service
+  service:
+    name: chronyd
+    state: started
+    enabled: yes
+
+- name: Updated Chrony conf on Ubuntu
+  template:
+    src: ubunut-chrony.conf.j2
+    dest: /etc/chrony/chrony.conf
+  when: ansible_distribution == "Ubuntu"
+  notify:
+    - Restart chrony service
+
+- name: Updated Chrony conf on CentOs
+  template:
+    src: centos-chrony.conf.j2
+    dest: /etc/chrony.conf
+  when: ansible_distribution == "CentOS"
+  notify:
+    - Restart chrony service
+
+
+- name: Add ssh Banner
+  copy:
+   content: "Attentation! this {{ansible_distribution}} is managed by Ansible, if you are not authorized, pelase exit !!! /n"
+   dest: /etc/banner.txt
+
+- name: Updated sshd_config for ssh Banner
+  become: yes
+  become_user: root
+  lineinfile:
+    path: /etc/ssh/sshd_config
+    regexp: "#Banner none"
+    line: "Banner /etc/banner.txt"
+    state: present
+  notify:
+     - Restart sshd service
+     - Restart ssh service
+
+- name: Add Group
+  group:
+    name: devopsgrp
+    state: present
+
+- name: Add User devopsgrp
+  user:
+    name: "{{item}}"
+    group: devopsgrp
+  loop: "{{usernames}}"
+
+- name: Directory for files
+  file:
+    path: /opt/tmpdir
+    state: directory
+    mode: 0755
+
+- name: Copy file to a remote directory
+  copy:
+   src: index.html
+   dest: /opt/tmpdir

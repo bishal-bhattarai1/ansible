@@ -1,0 +1,1396 @@
+2025-07-15 06:40:19,427 p=2555 u=vagrant n=ansible | PLAY [Setup DB] *************************************************************************************************************************************************************************************************
+2025-07-15 06:40:19,452 p=2555 u=vagrant n=ansible | TASK [Gathering Facts] ******************************************************************************************************************************************************************************************
+2025-07-15 06:40:22,680 p=2555 u=vagrant n=ansible | ok: [web1]
+2025-07-15 06:40:22,690 p=2555 u=vagrant n=ansible | TASK [Install mysql server] *************************************************************************************************************************************************************************************
+2025-07-15 06:40:25,256 p=2555 u=vagrant n=ansible | ok: [web1]
+2025-07-15 06:40:25,265 p=2555 u=vagrant n=ansible | TASK [Start and enable mysql server] ****************************************************************************************************************************************************************************
+2025-07-15 06:40:26,298 p=2555 u=vagrant n=ansible | ok: [web1]
+2025-07-15 06:40:26,308 p=2555 u=vagrant n=ansible | TASK [Install python3-pymysql pkg] ******************************************************************************************************************************************************************************
+2025-07-15 06:40:28,341 p=2555 u=vagrant n=ansible | ok: [web1]
+2025-07-15 06:40:28,350 p=2555 u=vagrant n=ansible | TASK [Creat a new database with name 'devopsdb'] ****************************************************************************************************************************************************************
+2025-07-15 06:40:29,135 p=2555 u=vagrant n=ansible | ok: [web1]
+2025-07-15 06:40:29,144 p=2555 u=vagrant n=ansible | TASK [Crete a database user with name 'devops' and password 'Admin@123' with all database privileges] ***********************************************************************************************************
+2025-07-15 06:40:30,069 p=2555 u=vagrant n=ansible | [WARNING]: Module did not set no_log for update_password
+
+2025-07-15 06:40:30,070 p=2555 u=vagrant n=ansible | changed: [web1]
+2025-07-15 06:40:30,075 p=2555 u=vagrant n=ansible | PLAY RECAP ******************************************************************************************************************************************************************************************************
+2025-07-15 06:40:30,075 p=2555 u=vagrant n=ansible | web1                       : ok=6    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2025-07-15 06:49:05,987 p=2791 u=vagrant n=ansible | PLAY [Setup DB] *************************************************************************************************************************************************************************************************
+2025-07-15 06:49:06,027 p=2791 u=vagrant n=ansible | TASK [Gathering Facts] ******************************************************************************************************************************************************************************************
+2025-07-15 06:49:08,898 p=2791 u=vagrant n=ansible | ok: [web1]
+2025-07-15 06:49:08,910 p=2791 u=vagrant n=ansible | TASK [Install mysql server] *************************************************************************************************************************************************************************************
+2025-07-15 06:49:11,366 p=2791 u=vagrant n=ansible | ok: [web1]
+2025-07-15 06:49:11,375 p=2791 u=vagrant n=ansible | TASK [Start and enable mysql server] ****************************************************************************************************************************************************************************
+2025-07-15 06:49:12,570 p=2791 u=vagrant n=ansible | ok: [web1]
+2025-07-15 06:49:12,579 p=2791 u=vagrant n=ansible | TASK [Install python3-pymysql pkg] ******************************************************************************************************************************************************************************
+2025-07-15 06:49:14,590 p=2791 u=vagrant n=ansible | ok: [web1]
+2025-07-15 06:49:14,598 p=2791 u=vagrant n=ansible | TASK [Creat a new database with name 'devopsdb'] ****************************************************************************************************************************************************************
+2025-07-15 06:49:15,311 p=2791 u=vagrant n=ansible | ok: [web1]
+2025-07-15 06:49:15,321 p=2791 u=vagrant n=ansible | TASK [Crete a database user with name 'devops' and password 'Admin@123' with all database privileges] ***********************************************************************************************************
+2025-07-15 06:49:16,099 p=2791 u=vagrant n=ansible | [WARNING]: Module did not set no_log for update_password
+
+2025-07-15 06:49:16,100 p=2791 u=vagrant n=ansible | changed: [web1]
+2025-07-15 06:49:16,105 p=2791 u=vagrant n=ansible | PLAY RECAP ******************************************************************************************************************************************************************************************************
+2025-07-15 06:49:16,105 p=2791 u=vagrant n=ansible | web1                       : ok=6    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2025-07-15 06:52:04,672 p=2911 u=vagrant n=ansible | [WARNING]: While constructing a mapping from /home/vagrant/ansible/example-6/dbplaybook.yml, line 16, column 9, found a duplicate dict key (msg). Using last defined value only.
+
+2025-07-15 06:52:04,772 p=2911 u=vagrant n=ansible | PLAY [Setup DB] *************************************************************************************************************************************************************************************************
+2025-07-15 06:52:04,790 p=2911 u=vagrant n=ansible | TASK [Gathering Facts] ******************************************************************************************************************************************************************************************
+2025-07-15 06:52:07,528 p=2911 u=vagrant n=ansible | ok: [web1]
+2025-07-15 06:52:07,568 p=2911 u=vagrant n=ansible | TASK [debug] ****************************************************************************************************************************************************************************************************
+2025-07-15 06:52:07,619 p=2911 u=vagrant n=ansible | ok: [web1] => {
+    "dbname": "devopsdb"
+}
+2025-07-15 06:52:07,631 p=2911 u=vagrant n=ansible | TASK [debug] ****************************************************************************************************************************************************************************************************
+2025-07-15 06:52:07,697 p=2911 u=vagrant n=ansible | ok: [web1] => {
+    "msg": "Value of dbname is Admin@123"
+}
+2025-07-15 06:52:07,707 p=2911 u=vagrant n=ansible | TASK [Install mysql server] *************************************************************************************************************************************************************************************
+2025-07-15 06:52:09,990 p=2911 u=vagrant n=ansible | ok: [web1]
+2025-07-15 06:52:10,004 p=2911 u=vagrant n=ansible | TASK [Start and enable mysql server] ****************************************************************************************************************************************************************************
+2025-07-15 06:52:11,052 p=2911 u=vagrant n=ansible | ok: [web1]
+2025-07-15 06:52:11,064 p=2911 u=vagrant n=ansible | TASK [Install python3-pymysql pkg] ******************************************************************************************************************************************************************************
+2025-07-15 06:52:12,985 p=2911 u=vagrant n=ansible | ok: [web1]
+2025-07-15 06:52:12,997 p=2911 u=vagrant n=ansible | TASK [Creat a new database with name 'devopsdb'] ****************************************************************************************************************************************************************
+2025-07-15 06:52:13,673 p=2911 u=vagrant n=ansible | ok: [web1]
+2025-07-15 06:52:13,682 p=2911 u=vagrant n=ansible | TASK [Crete a database user with name 'devops' and password 'Admin@123' with all database privileges] ***********************************************************************************************************
+2025-07-15 06:52:14,495 p=2911 u=vagrant n=ansible | [WARNING]: Module did not set no_log for update_password
+
+2025-07-15 06:52:14,500 p=2911 u=vagrant n=ansible | changed: [web1]
+2025-07-15 06:52:14,505 p=2911 u=vagrant n=ansible | PLAY RECAP ******************************************************************************************************************************************************************************************************
+2025-07-15 06:52:14,506 p=2911 u=vagrant n=ansible | web1                       : ok=8    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2025-07-15 06:53:38,408 p=3053 u=vagrant n=ansible | [WARNING]: While constructing a mapping from /home/vagrant/ansible/example-6/dbplaybook.yml, line 16, column 9, found a duplicate dict key (msg). Using last defined value only.
+
+2025-07-15 06:53:38,536 p=3053 u=vagrant n=ansible | PLAY [Setup DB] *************************************************************************************************************************************************************************************************
+2025-07-15 06:53:38,558 p=3053 u=vagrant n=ansible | TASK [Gathering Facts] ******************************************************************************************************************************************************************************************
+2025-07-15 06:53:41,267 p=3053 u=vagrant n=ansible | ok: [web1]
+2025-07-15 06:53:41,277 p=3053 u=vagrant n=ansible | TASK [debug] ****************************************************************************************************************************************************************************************************
+2025-07-15 06:53:41,326 p=3053 u=vagrant n=ansible | ok: [web1] => {
+    "dbname": "devopsdb"
+}
+2025-07-15 06:53:41,337 p=3053 u=vagrant n=ansible | TASK [debug] ****************************************************************************************************************************************************************************************************
+2025-07-15 06:53:41,392 p=3053 u=vagrant n=ansible | ok: [web1] => {
+    "msg": "Value of dbname is Admin@123"
+}
+2025-07-15 06:53:41,402 p=3053 u=vagrant n=ansible | TASK [Install mysql server] *************************************************************************************************************************************************************************************
+2025-07-15 06:53:43,509 p=3053 u=vagrant n=ansible | ok: [web1]
+2025-07-15 06:53:43,524 p=3053 u=vagrant n=ansible | TASK [Start and enable mysql server] ****************************************************************************************************************************************************************************
+2025-07-15 06:53:44,658 p=3053 u=vagrant n=ansible | ok: [web1]
+2025-07-15 06:53:44,667 p=3053 u=vagrant n=ansible | TASK [Install python3-pymysql pkg] ******************************************************************************************************************************************************************************
+2025-07-15 06:53:46,706 p=3053 u=vagrant n=ansible | ok: [web1]
+2025-07-15 06:53:46,717 p=3053 u=vagrant n=ansible | TASK [Creat a new database with name 'devopsdb'] ****************************************************************************************************************************************************************
+2025-07-15 06:53:47,484 p=3053 u=vagrant n=ansible | ok: [web1]
+2025-07-15 06:53:47,493 p=3053 u=vagrant n=ansible | TASK [Crete a database user with name 'devops' and password 'Admin@123' with all database privileges] ***********************************************************************************************************
+2025-07-15 06:53:48,294 p=3053 u=vagrant n=ansible | [WARNING]: Module did not set no_log for update_password
+
+2025-07-15 06:53:48,296 p=3053 u=vagrant n=ansible | changed: [web1]
+2025-07-15 06:53:48,299 p=3053 u=vagrant n=ansible | PLAY RECAP ******************************************************************************************************************************************************************************************************
+2025-07-15 06:53:48,300 p=3053 u=vagrant n=ansible | web1                       : ok=8    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2025-07-15 06:54:33,986 p=3166 u=vagrant n=ansible | ERROR! Syntax Error while loading YAML.
+  found character that cannot start any token
+
+The error appears to be in '/home/vagrant/ansible/example-6/dbplaybook.yml': line 20, column 1, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+    - debug:
+	msg: "Value of dbname is {{dbpass}}"
+^ here
+There appears to be a tab character at the start of the line.
+
+YAML does not use tabs for formatting. Tabs should be replaced with spaces.
+
+For example:
+    - name: update tooling
+      vars:
+        version: 1.2.3
+#    ^--- there is a tab there.
+
+Should be written as:
+    - name: update tooling
+      vars:
+        version: 1.2.3
+# ^--- all spaces here.
+We could be wrong, but this one looks like it might be an issue with
+missing quotes. Always quote template expression brackets when they
+start a value. For instance:
+
+    with_items:
+      - {{ foo }}
+
+Should be written as:
+
+    with_items:
+      - "{{ foo }}"
+
+2025-07-15 06:55:22,028 p=3174 u=vagrant n=ansible | ERROR! Syntax Error while loading YAML.
+  found character that cannot start any token
+
+The error appears to be in '/home/vagrant/ansible/example-6/dbplaybook.yml': line 20, column 1, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+    - debug:
+	msg: "Value of dbname is {{dbpass}}"
+^ here
+There appears to be a tab character at the start of the line.
+
+YAML does not use tabs for formatting. Tabs should be replaced with spaces.
+
+For example:
+    - name: update tooling
+      vars:
+        version: 1.2.3
+#    ^--- there is a tab there.
+
+Should be written as:
+    - name: update tooling
+      vars:
+        version: 1.2.3
+# ^--- all spaces here.
+We could be wrong, but this one looks like it might be an issue with
+missing quotes. Always quote template expression brackets when they
+start a value. For instance:
+
+    with_items:
+      - {{ foo }}
+
+Should be written as:
+
+    with_items:
+      - "{{ foo }}"
+
+2025-07-15 06:55:46,328 p=3178 u=vagrant n=ansible | PLAY [Setup DB] *************************************************************************************************************************************************************************************************
+2025-07-15 06:55:46,348 p=3178 u=vagrant n=ansible | TASK [Gathering Facts] ******************************************************************************************************************************************************************************************
+2025-07-15 06:55:49,014 p=3178 u=vagrant n=ansible | ok: [web1]
+2025-07-15 06:55:49,024 p=3178 u=vagrant n=ansible | TASK [debug] ****************************************************************************************************************************************************************************************************
+2025-07-15 06:55:49,077 p=3178 u=vagrant n=ansible | ok: [web1] => {
+    "dbname": "devopsdb"
+}
+2025-07-15 06:55:49,086 p=3178 u=vagrant n=ansible | TASK [debug] ****************************************************************************************************************************************************************************************************
+2025-07-15 06:55:49,132 p=3178 u=vagrant n=ansible | ok: [web1] => {
+    "msg": "Value of dbname is devopsdb"
+}
+2025-07-15 06:55:49,144 p=3178 u=vagrant n=ansible | TASK [debug] ****************************************************************************************************************************************************************************************************
+2025-07-15 06:55:49,194 p=3178 u=vagrant n=ansible | ok: [web1] => {
+    "msg": "Value of dbname is devops"
+}
+2025-07-15 06:55:49,202 p=3178 u=vagrant n=ansible | TASK [debug] ****************************************************************************************************************************************************************************************************
+2025-07-15 06:55:49,248 p=3178 u=vagrant n=ansible | ok: [web1] => {
+    "msg": "Value of dbname is Admin@123"
+}
+2025-07-15 06:55:49,259 p=3178 u=vagrant n=ansible | TASK [Install mysql server] *************************************************************************************************************************************************************************************
+2025-07-15 06:55:51,566 p=3178 u=vagrant n=ansible | ok: [web1]
+2025-07-15 06:55:51,575 p=3178 u=vagrant n=ansible | TASK [Start and enable mysql server] ****************************************************************************************************************************************************************************
+2025-07-15 06:55:52,633 p=3178 u=vagrant n=ansible | ok: [web1]
+2025-07-15 06:55:52,642 p=3178 u=vagrant n=ansible | TASK [Install python3-pymysql pkg] ******************************************************************************************************************************************************************************
+2025-07-15 06:55:54,576 p=3178 u=vagrant n=ansible | ok: [web1]
+2025-07-15 06:55:54,585 p=3178 u=vagrant n=ansible | TASK [Creat a new database with name 'devopsdb'] ****************************************************************************************************************************************************************
+2025-07-15 06:55:55,271 p=3178 u=vagrant n=ansible | ok: [web1]
+2025-07-15 06:55:55,280 p=3178 u=vagrant n=ansible | TASK [Crete a database user with name 'devops' and password 'Admin@123' with all database privileges] ***********************************************************************************************************
+2025-07-15 06:55:56,105 p=3178 u=vagrant n=ansible | [WARNING]: Module did not set no_log for update_password
+
+2025-07-15 06:55:56,106 p=3178 u=vagrant n=ansible | changed: [web1]
+2025-07-15 06:55:56,111 p=3178 u=vagrant n=ansible | PLAY RECAP ******************************************************************************************************************************************************************************************************
+2025-07-15 06:55:56,111 p=3178 u=vagrant n=ansible | web1                       : ok=10   changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2025-07-15 07:01:07,891 p=3361 u=vagrant n=ansible | PLAY [Setup DB] *************************************************************************************************************************************************************************************************
+2025-07-15 07:01:08,102 p=3361 u=vagrant n=ansible | TASK [Gathering Facts] ******************************************************************************************************************************************************************************************
+2025-07-15 07:01:17,259 p=3361 u=vagrant n=ansible |  [ERROR]: User interrupted execution
+
+2025-07-15 07:01:48,295 p=3389 u=vagrant n=ansible | PLAY [Setup DB] *************************************************************************************************************************************************************************************************
+2025-07-15 07:01:48,802 p=3389 u=vagrant n=ansible | TASK [Gathering Facts] ******************************************************************************************************************************************************************************************
+2025-07-15 07:02:10,620 p=3389 u=vagrant n=ansible | ok: [web1]
+2025-07-15 07:02:10,807 p=3389 u=vagrant n=ansible | TASK [debug] ****************************************************************************************************************************************************************************************************
+2025-07-15 07:02:11,386 p=3389 u=vagrant n=ansible | ok: [web1] => {
+    "msg": "Value of dbname is devopsdb"
+}
+2025-07-15 07:02:11,574 p=3389 u=vagrant n=ansible | TASK [debug] ****************************************************************************************************************************************************************************************************
+2025-07-15 07:02:12,087 p=3389 u=vagrant n=ansible | ok: [web1] => {
+    "msg": "Value of dbname is devops"
+}
+2025-07-15 07:02:12,353 p=3389 u=vagrant n=ansible | TASK [debug] ****************************************************************************************************************************************************************************************************
+2025-07-15 07:02:12,889 p=3389 u=vagrant n=ansible | ok: [web1] => {
+    "msg": "Value of dbname is Admin@123"
+}
+2025-07-15 07:02:13,097 p=3389 u=vagrant n=ansible | TASK [Install mysql server] *************************************************************************************************************************************************************************************
+2025-07-15 07:02:42,139 p=3389 u=vagrant n=ansible | ok: [web1]
+2025-07-15 07:02:42,260 p=3389 u=vagrant n=ansible | TASK [Start and enable mysql server] ****************************************************************************************************************************************************************************
+2025-07-15 07:02:56,800 p=3389 u=vagrant n=ansible | ok: [web1]
+2025-07-15 07:02:57,003 p=3389 u=vagrant n=ansible | TASK [Install python3-pymysql pkg] ******************************************************************************************************************************************************************************
+2025-07-15 07:03:22,726 p=3389 u=vagrant n=ansible | ok: [web1]
+2025-07-15 07:03:23,089 p=3389 u=vagrant n=ansible | TASK [Creat a new database with name 'devopsdb'] ****************************************************************************************************************************************************************
+2025-07-15 07:03:33,087 p=3389 u=vagrant n=ansible | ok: [web1]
+2025-07-15 07:03:33,226 p=3389 u=vagrant n=ansible | TASK [Crete a database user with name 'devops' and password 'Admin@123' with all database privileges] ***********************************************************************************************************
+2025-07-15 07:03:43,526 p=3389 u=vagrant n=ansible | [WARNING]: Module did not set no_log for update_password
+
+2025-07-15 07:03:43,531 p=3389 u=vagrant n=ansible | changed: [web1]
+2025-07-15 07:03:43,606 p=3389 u=vagrant n=ansible | PLAY RECAP ******************************************************************************************************************************************************************************************************
+2025-07-15 07:03:43,610 p=3389 u=vagrant n=ansible | web1                       : ok=9    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2025-07-16 02:59:25,403 p=1385 u=vagrant n=ansible | web | SUCCESS => {
+    "ansible_facts": {
+        "ansible_all_ipv4_addresses": [
+            "10.0.2.15",
+            "192.168.56.35"
+        ],
+        "ansible_all_ipv6_addresses": [
+            "fd17:625c:f037:2:a00:27ff:fe2c:2622",
+            "fe80::a00:27ff:fe2c:2622",
+            "fe80::a00:27ff:fec2:f9bd"
+        ],
+        "ansible_apparmor": {
+            "status": "enabled"
+        },
+        "ansible_architecture": "x86_64",
+        "ansible_bios_date": "12/01/2006",
+        "ansible_bios_version": "VirtualBox",
+        "ansible_cmdline": {
+            "BOOT_IMAGE": "/vmlinuz-5.4.0-169-generic",
+            "biosdevname": "0",
+            "net.ifnames": "0",
+            "quiet": true,
+            "ro": true,
+            "root": "UUID=2f048649-31d0-47f0-8830-553c7a1fc4d6"
+        },
+        "ansible_date_time": {
+            "date": "2025-07-16",
+            "day": "16",
+            "epoch": "1752634763",
+            "hour": "02",
+            "iso8601": "2025-07-16T02:59:23Z",
+            "iso8601_basic": "20250716T025923897399",
+            "iso8601_basic_short": "20250716T025923",
+            "iso8601_micro": "2025-07-16T02:59:23.897938Z",
+            "minute": "59",
+            "month": "07",
+            "second": "23",
+            "time": "02:59:23",
+            "tz": "UTC",
+            "tz_offset": "+0000",
+            "weekday": "Wednesday",
+            "weekday_number": "3",
+            "weeknumber": "28",
+            "year": "2025"
+        },
+        "ansible_default_ipv4": {
+            "address": "10.0.2.15",
+            "alias": "eth0",
+            "broadcast": "10.0.2.255",
+            "gateway": "10.0.2.2",
+            "interface": "eth0",
+            "macaddress": "08:00:27:2c:26:22",
+            "mtu": 1500,
+            "netmask": "255.255.255.0",
+            "network": "10.0.2.0",
+            "type": "ether"
+        },
+        "ansible_default_ipv6": {
+            "address": "fd17:625c:f037:2:a00:27ff:fe2c:2622",
+            "gateway": "fe80::2",
+            "interface": "eth0",
+            "macaddress": "08:00:27:2c:26:22",
+            "mtu": 1500,
+            "prefix": "64",
+            "scope": "global",
+            "type": "ether"
+        },
+        "ansible_device_links": {
+            "ids": {
+                "sda": [
+                    "ata-VBOX_HARDDISK_VB51eb4fbc-95ee26ac",
+                    "scsi-0ATA_VBOX_HARDDISK_VB51eb4fbc-95ee26ac",
+                    "scsi-1ATA_VBOX_HARDDISK_VB51eb4fbc-95ee26ac",
+                    "scsi-SATA_VBOX_HARDDISK_VB51eb4fbc-95ee26ac"
+                ],
+                "sda1": [
+                    "ata-VBOX_HARDDISK_VB51eb4fbc-95ee26ac-part1",
+                    "scsi-0ATA_VBOX_HARDDISK_VB51eb4fbc-95ee26ac-part1",
+                    "scsi-1ATA_VBOX_HARDDISK_VB51eb4fbc-95ee26ac-part1",
+                    "scsi-SATA_VBOX_HARDDISK_VB51eb4fbc-95ee26ac-part1"
+                ],
+                "sda2": [
+                    "ata-VBOX_HARDDISK_VB51eb4fbc-95ee26ac-part2",
+                    "scsi-0ATA_VBOX_HARDDISK_VB51eb4fbc-95ee26ac-part2",
+                    "scsi-1ATA_VBOX_HARDDISK_VB51eb4fbc-95ee26ac-part2",
+                    "scsi-SATA_VBOX_HARDDISK_VB51eb4fbc-95ee26ac-part2"
+                ],
+                "sda3": [
+                    "ata-VBOX_HARDDISK_VB51eb4fbc-95ee26ac-part3",
+                    "scsi-0ATA_VBOX_HARDDISK_VB51eb4fbc-95ee26ac-part3",
+                    "scsi-1ATA_VBOX_HARDDISK_VB51eb4fbc-95ee26ac-part3",
+                    "scsi-SATA_VBOX_HARDDISK_VB51eb4fbc-95ee26ac-part3"
+                ]
+            },
+            "labels": {},
+            "masters": {},
+            "uuids": {
+                "sda1": [
+                    "d58ba78b-2277-476d-b8fb-1b9c08ff950b"
+                ],
+                "sda2": [
+                    "e304b3dd-b082-4881-8331-83240f1965c1"
+                ],
+                "sda3": [
+                    "2f048649-31d0-47f0-8830-553c7a1fc4d6"
+                ]
+            }
+        },
+        "ansible_devices": {
+            "loop0": {
+                "holders": [],
+                "host": "",
+                "links": {
+                    "ids": [],
+                    "labels": [],
+                    "masters": [],
+                    "uuids": []
+                },
+                "model": null,
+                "partitions": {},
+                "removable": "0",
+                "rotational": "1",
+                "sas_address": null,
+                "sas_device_handle": null,
+                "scheduler_mode": "none",
+                "sectors": "0",
+                "sectorsize": "512",
+                "size": "0.00 Bytes",
+                "support_discard": "4096",
+                "vendor": null,
+                "virtual": 1
+            },
+            "loop1": {
+                "holders": [],
+                "host": "",
+                "links": {
+                    "ids": [],
+                    "labels": [],
+                    "masters": [],
+                    "uuids": []
+                },
+                "model": null,
+                "partitions": {},
+                "removable": "0",
+                "rotational": "1",
+                "sas_address": null,
+                "sas_device_handle": null,
+                "scheduler_mode": "none",
+                "sectors": "0",
+                "sectorsize": "512",
+                "size": "0.00 Bytes",
+                "support_discard": "0",
+                "vendor": null,
+                "virtual": 1
+            },
+            "loop2": {
+                "holders": [],
+                "host": "",
+                "links": {
+                    "ids": [],
+                    "labels": [],
+                    "masters": [],
+                    "uuids": []
+                },
+                "model": null,
+                "partitions": {},
+                "removable": "0",
+                "rotational": "1",
+                "sas_address": null,
+                "sas_device_handle": null,
+                "scheduler_mode": "none",
+                "sectors": "0",
+                "sectorsize": "512",
+                "size": "0.00 Bytes",
+                "support_discard": "0",
+                "vendor": null,
+                "virtual": 1
+            },
+            "loop3": {
+                "holders": [],
+                "host": "",
+                "links": {
+                    "ids": [],
+                    "labels": [],
+                    "masters": [],
+                    "uuids": []
+                },
+                "model": null,
+                "partitions": {},
+                "removable": "0",
+                "rotational": "1",
+                "sas_address": null,
+                "sas_device_handle": null,
+                "scheduler_mode": "none",
+                "sectors": "0",
+                "sectorsize": "512",
+                "size": "0.00 Bytes",
+                "support_discard": "0",
+                "vendor": null,
+                "virtual": 1
+            },
+            "loop4": {
+                "holders": [],
+                "host": "",
+                "links": {
+                    "ids": [],
+                    "labels": [],
+                    "masters": [],
+                    "uuids": []
+                },
+                "model": null,
+                "partitions": {},
+                "removable": "0",
+                "rotational": "1",
+                "sas_address": null,
+                "sas_device_handle": null,
+                "scheduler_mode": "none",
+                "sectors": "0",
+                "sectorsize": "512",
+                "size": "0.00 Bytes",
+                "support_discard": "0",
+                "vendor": null,
+                "virtual": 1
+            },
+            "loop5": {
+                "holders": [],
+                "host": "",
+                "links": {
+                    "ids": [],
+                    "labels": [],
+                    "masters": [],
+                    "uuids": []
+                },
+                "model": null,
+                "partitions": {},
+                "removable": "0",
+                "rotational": "1",
+                "sas_address": null,
+                "sas_device_handle": null,
+                "scheduler_mode": "none",
+                "sectors": "0",
+                "sectorsize": "512",
+                "size": "0.00 Bytes",
+                "support_discard": "0",
+                "vendor": null,
+                "virtual": 1
+            },
+            "loop6": {
+                "holders": [],
+                "host": "",
+                "links": {
+                    "ids": [],
+                    "labels": [],
+                    "masters": [],
+                    "uuids": []
+                },
+                "model": null,
+                "partitions": {},
+                "removable": "0",
+                "rotational": "1",
+                "sas_address": null,
+                "sas_device_handle": null,
+                "scheduler_mode": "none",
+                "sectors": "0",
+                "sectorsize": "512",
+                "size": "0.00 Bytes",
+                "support_discard": "0",
+                "vendor": null,
+                "virtual": 1
+            },
+            "loop7": {
+                "holders": [],
+                "host": "",
+                "links": {
+                    "ids": [],
+                    "labels": [],
+                    "masters": [],
+                    "uuids": []
+                },
+                "model": null,
+                "partitions": {},
+                "removable": "0",
+                "rotational": "1",
+                "sas_address": null,
+                "sas_device_handle": null,
+                "scheduler_mode": "none",
+                "sectors": "0",
+                "sectorsize": "512",
+                "size": "0.00 Bytes",
+                "support_discard": "0",
+                "vendor": null,
+                "virtual": 1
+            },
+            "sda": {
+                "holders": [],
+                "host": "SATA controller: Intel Corporation 82801HM/HEM (ICH8M/ICH8M-E) SATA Controller [AHCI mode] (rev 02)",
+                "links": {
+                    "ids": [
+                        "ata-VBOX_HARDDISK_VB51eb4fbc-95ee26ac",
+                        "scsi-0ATA_VBOX_HARDDISK_VB51eb4fbc-95ee26ac",
+                        "scsi-1ATA_VBOX_HARDDISK_VB51eb4fbc-95ee26ac",
+                        "scsi-SATA_VBOX_HARDDISK_VB51eb4fbc-95ee26ac"
+                    ],
+                    "labels": [],
+                    "masters": [],
+                    "uuids": []
+                },
+                "model": "VBOX HARDDISK",
+                "partitions": {
+                    "sda1": {
+                        "holders": [],
+                        "links": {
+                            "ids": [
+                                "ata-VBOX_HARDDISK_VB51eb4fbc-95ee26ac-part1",
+                                "scsi-0ATA_VBOX_HARDDISK_VB51eb4fbc-95ee26ac-part1",
+                                "scsi-1ATA_VBOX_HARDDISK_VB51eb4fbc-95ee26ac-part1",
+                                "scsi-SATA_VBOX_HARDDISK_VB51eb4fbc-95ee26ac-part1"
+                            ],
+                            "labels": [],
+                            "masters": [],
+                            "uuids": [
+                                "d58ba78b-2277-476d-b8fb-1b9c08ff950b"
+                            ]
+                        },
+                        "sectors": "997376",
+                        "sectorsize": 512,
+                        "size": "487.00 MB",
+                        "start": "2048",
+                        "uuid": "d58ba78b-2277-476d-b8fb-1b9c08ff950b"
+                    },
+                    "sda2": {
+                        "holders": [],
+                        "links": {
+                            "ids": [
+                                "ata-VBOX_HARDDISK_VB51eb4fbc-95ee26ac-part2",
+                                "scsi-0ATA_VBOX_HARDDISK_VB51eb4fbc-95ee26ac-part2",
+                                "scsi-1ATA_VBOX_HARDDISK_VB51eb4fbc-95ee26ac-part2",
+                                "scsi-SATA_VBOX_HARDDISK_VB51eb4fbc-95ee26ac-part2"
+                            ],
+                            "labels": [],
+                            "masters": [],
+                            "uuids": [
+                                "e304b3dd-b082-4881-8331-83240f1965c1"
+                            ]
+                        },
+                        "sectors": "3999744",
+                        "sectorsize": 512,
+                        "size": "1.91 GB",
+                        "start": "999424",
+                        "uuid": "e304b3dd-b082-4881-8331-83240f1965c1"
+                    },
+                    "sda3": {
+                        "holders": [],
+                        "links": {
+                            "ids": [
+                                "ata-VBOX_HARDDISK_VB51eb4fbc-95ee26ac-part3",
+                                "scsi-0ATA_VBOX_HARDDISK_VB51eb4fbc-95ee26ac-part3",
+                                "scsi-1ATA_VBOX_HARDDISK_VB51eb4fbc-95ee26ac-part3",
+                                "scsi-SATA_VBOX_HARDDISK_VB51eb4fbc-95ee26ac-part3"
+                            ],
+                            "labels": [],
+                            "masters": [],
+                            "uuids": [
+                                "2f048649-31d0-47f0-8830-553c7a1fc4d6"
+                            ]
+                        },
+                        "sectors": "263434240",
+                        "sectorsize": 512,
+                        "size": "125.62 GB",
+                        "start": "4999168",
+                        "uuid": "2f048649-31d0-47f0-8830-553c7a1fc4d6"
+                    }
+                },
+                "removable": "0",
+                "rotational": "1",
+                "sas_address": null,
+                "sas_device_handle": null,
+                "scheduler_mode": "mq-deadline",
+                "sectors": "268435456",
+                "sectorsize": "512",
+                "size": "128.00 GB",
+                "support_discard": "0",
+                "vendor": "ATA",
+                "virtual": 1
+            }
+        },
+        "ansible_distribution": "Ubuntu",
+        "ansible_distribution_file_parsed": true,
+        "ansible_distribution_file_path": "/etc/os-release",
+        "ansible_distribution_file_variety": "Debian",
+        "ansible_distribution_major_version": "20",
+        "ansible_distribution_release": "focal",
+        "ansible_distribution_version": "20.04",
+        "ansible_dns": {
+            "nameservers": [
+                "127.0.0.53"
+            ],
+            "options": {
+                "edns0": true,
+                "trust-ad": true
+            }
+        },
+        "ansible_domain": "",
+        "ansible_effective_group_id": 1000,
+        "ansible_effective_user_id": 1000,
+        "ansible_env": {
+            "DBUS_SESSION_BUS_ADDRESS": "unix:path=/run/user/1000/bus",
+            "HOME": "/home/vagrant",
+            "LANG": "en_US.UTF-8",
+            "LANGUAGE": "en_US:",
+            "LOGNAME": "vagrant",
+            "MOTD_SHOWN": "pam",
+            "PATH": "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin",
+            "PWD": "/home/vagrant",
+            "SHELL": "/bin/bash",
+            "SHLVL": "0",
+            "SSH_CLIENT": "192.168.56.45 50660 22",
+            "SSH_CONNECTION": "192.168.56.45 50660 192.168.56.35 22",
+            "SSH_TTY": "/dev/pts/1",
+            "TERM": "xterm-256color",
+            "USER": "vagrant",
+            "XDG_RUNTIME_DIR": "/run/user/1000",
+            "XDG_SESSION_CLASS": "user",
+            "XDG_SESSION_ID": "5",
+            "XDG_SESSION_TYPE": "tty",
+            "_": "/bin/sh"
+        },
+        "ansible_eth0": {
+            "active": true,
+            "device": "eth0",
+            "features": {
+                "esp_hw_offload": "off [fixed]",
+                "esp_tx_csum_hw_offload": "off [fixed]",
+                "fcoe_mtu": "off [fixed]",
+                "generic_receive_offload": "on",
+                "generic_segmentation_offload": "on",
+                "highdma": "off [fixed]",
+                "hw_tc_offload": "off [fixed]",
+                "l2_fwd_offload": "off [fixed]",
+                "large_receive_offload": "off [fixed]",
+                "loopback": "off [fixed]",
+                "netns_local": "off [fixed]",
+                "ntuple_filters": "off [fixed]",
+                "receive_hashing": "off [fixed]",
+                "rx_all": "off",
+                "rx_checksumming": "off",
+                "rx_fcs": "off",
+                "rx_gro_hw": "off [fixed]",
+                "rx_udp_tunnel_port_offload": "off [fixed]",
+                "rx_vlan_filter": "on [fixed]",
+                "rx_vlan_offload": "on",
+                "rx_vlan_stag_filter": "off [fixed]",
+                "rx_vlan_stag_hw_parse": "off [fixed]",
+                "scatter_gather": "on",
+                "tcp_segmentation_offload": "on",
+                "tls_hw_record": "off [fixed]",
+                "tls_hw_rx_offload": "off [fixed]",
+                "tls_hw_tx_offload": "off [fixed]",
+                "tx_checksum_fcoe_crc": "off [fixed]",
+                "tx_checksum_ip_generic": "on",
+                "tx_checksum_ipv4": "off [fixed]",
+                "tx_checksum_ipv6": "off [fixed]",
+                "tx_checksum_sctp": "off [fixed]",
+                "tx_checksumming": "on",
+                "tx_esp_segmentation": "off [fixed]",
+                "tx_fcoe_segmentation": "off [fixed]",
+                "tx_gre_csum_segmentation": "off [fixed]",
+                "tx_gre_segmentation": "off [fixed]",
+                "tx_gso_partial": "off [fixed]",
+                "tx_gso_robust": "off [fixed]",
+                "tx_ipxip4_segmentation": "off [fixed]",
+                "tx_ipxip6_segmentation": "off [fixed]",
+                "tx_lockless": "off [fixed]",
+                "tx_nocache_copy": "off",
+                "tx_scatter_gather": "on",
+                "tx_scatter_gather_fraglist": "off [fixed]",
+                "tx_sctp_segmentation": "off [fixed]",
+                "tx_tcp6_segmentation": "off [fixed]",
+                "tx_tcp_ecn_segmentation": "off [fixed]",
+                "tx_tcp_mangleid_segmentation": "off",
+                "tx_tcp_segmentation": "on",
+                "tx_udp_segmentation": "off [fixed]",
+                "tx_udp_tnl_csum_segmentation": "off [fixed]",
+                "tx_udp_tnl_segmentation": "off [fixed]",
+                "tx_vlan_offload": "on [fixed]",
+                "tx_vlan_stag_hw_insert": "off [fixed]",
+                "vlan_challenged": "off [fixed]"
+            },
+            "hw_timestamp_filters": [],
+            "ipv4": {
+                "address": "10.0.2.15",
+                "broadcast": "10.0.2.255",
+                "netmask": "255.255.255.0",
+                "network": "10.0.2.0"
+            },
+            "ipv6": [
+                {
+                    "address": "fd17:625c:f037:2:a00:27ff:fe2c:2622",
+                    "prefix": "64",
+                    "scope": "global"
+                },
+                {
+                    "address": "fe80::a00:27ff:fe2c:2622",
+                    "prefix": "64",
+                    "scope": "link"
+                }
+            ],
+            "macaddress": "08:00:27:2c:26:22",
+            "module": "e1000",
+            "mtu": 1500,
+            "pciid": "0000:00:03.0",
+            "promisc": false,
+            "speed": 1000,
+            "timestamping": [
+                "tx_software",
+                "rx_software",
+                "software"
+            ],
+            "type": "ether"
+        },
+        "ansible_eth1": {
+            "active": true,
+            "device": "eth1",
+            "features": {
+                "esp_hw_offload": "off [fixed]",
+                "esp_tx_csum_hw_offload": "off [fixed]",
+                "fcoe_mtu": "off [fixed]",
+                "generic_receive_offload": "on",
+                "generic_segmentation_offload": "on",
+                "highdma": "off [fixed]",
+                "hw_tc_offload": "off [fixed]",
+                "l2_fwd_offload": "off [fixed]",
+                "large_receive_offload": "off [fixed]",
+                "loopback": "off [fixed]",
+                "netns_local": "off [fixed]",
+                "ntuple_filters": "off [fixed]",
+                "receive_hashing": "off [fixed]",
+                "rx_all": "off",
+                "rx_checksumming": "off",
+                "rx_fcs": "off",
+                "rx_gro_hw": "off [fixed]",
+                "rx_udp_tunnel_port_offload": "off [fixed]",
+                "rx_vlan_filter": "on [fixed]",
+                "rx_vlan_offload": "on",
+                "rx_vlan_stag_filter": "off [fixed]",
+                "rx_vlan_stag_hw_parse": "off [fixed]",
+                "scatter_gather": "on",
+                "tcp_segmentation_offload": "on",
+                "tls_hw_record": "off [fixed]",
+                "tls_hw_rx_offload": "off [fixed]",
+                "tls_hw_tx_offload": "off [fixed]",
+                "tx_checksum_fcoe_crc": "off [fixed]",
+                "tx_checksum_ip_generic": "on",
+                "tx_checksum_ipv4": "off [fixed]",
+                "tx_checksum_ipv6": "off [fixed]",
+                "tx_checksum_sctp": "off [fixed]",
+                "tx_checksumming": "on",
+                "tx_esp_segmentation": "off [fixed]",
+                "tx_fcoe_segmentation": "off [fixed]",
+                "tx_gre_csum_segmentation": "off [fixed]",
+                "tx_gre_segmentation": "off [fixed]",
+                "tx_gso_partial": "off [fixed]",
+                "tx_gso_robust": "off [fixed]",
+                "tx_ipxip4_segmentation": "off [fixed]",
+                "tx_ipxip6_segmentation": "off [fixed]",
+                "tx_lockless": "off [fixed]",
+                "tx_nocache_copy": "off",
+                "tx_scatter_gather": "on",
+                "tx_scatter_gather_fraglist": "off [fixed]",
+                "tx_sctp_segmentation": "off [fixed]",
+                "tx_tcp6_segmentation": "off [fixed]",
+                "tx_tcp_ecn_segmentation": "off [fixed]",
+                "tx_tcp_mangleid_segmentation": "off",
+                "tx_tcp_segmentation": "on",
+                "tx_udp_segmentation": "off [fixed]",
+                "tx_udp_tnl_csum_segmentation": "off [fixed]",
+                "tx_udp_tnl_segmentation": "off [fixed]",
+                "tx_vlan_offload": "on [fixed]",
+                "tx_vlan_stag_hw_insert": "off [fixed]",
+                "vlan_challenged": "off [fixed]"
+            },
+            "hw_timestamp_filters": [],
+            "ipv4": {
+                "address": "192.168.56.35",
+                "broadcast": "192.168.56.255",
+                "netmask": "255.255.255.0",
+                "network": "192.168.56.0"
+            },
+            "ipv6": [
+                {
+                    "address": "fe80::a00:27ff:fec2:f9bd",
+                    "prefix": "64",
+                    "scope": "link"
+                }
+            ],
+            "macaddress": "08:00:27:c2:f9:bd",
+            "module": "e1000",
+            "mtu": 1500,
+            "pciid": "0000:00:08.0",
+            "promisc": false,
+            "speed": 1000,
+            "timestamping": [
+                "tx_software",
+                "rx_software",
+                "software"
+            ],
+            "type": "ether"
+        },
+        "ansible_fibre_channel_wwn": [],
+        "ansible_fips": false,
+        "ansible_form_factor": "Other",
+        "ansible_fqdn": "localhost",
+        "ansible_hostname": "ubuntu2004",
+        "ansible_hostnqn": "",
+        "ansible_interfaces": [
+            "lo",
+            "eth1",
+            "eth0"
+        ],
+        "ansible_is_chroot": false,
+        "ansible_iscsi_iqn": "",
+        "ansible_kernel": "5.4.0-169-generic",
+        "ansible_kernel_version": "#187-Ubuntu SMP Thu Nov 23 14:52:28 UTC 2023",
+        "ansible_lo": {
+            "active": true,
+            "device": "lo",
+            "features": {
+                "esp_hw_offload": "off [fixed]",
+                "esp_tx_csum_hw_offload": "off [fixed]",
+                "fcoe_mtu": "off [fixed]",
+                "generic_receive_offload": "on",
+                "generic_segmentation_offload": "on",
+                "highdma": "on [fixed]",
+                "hw_tc_offload": "off [fixed]",
+                "l2_fwd_offload": "off [fixed]",
+                "large_receive_offload": "off [fixed]",
+                "loopback": "on [fixed]",
+                "netns_local": "on [fixed]",
+                "ntuple_filters": "off [fixed]",
+                "receive_hashing": "off [fixed]",
+                "rx_all": "off [fixed]",
+                "rx_checksumming": "on [fixed]",
+                "rx_fcs": "off [fixed]",
+                "rx_gro_hw": "off [fixed]",
+                "rx_udp_tunnel_port_offload": "off [fixed]",
+                "rx_vlan_filter": "off [fixed]",
+                "rx_vlan_offload": "off [fixed]",
+                "rx_vlan_stag_filter": "off [fixed]",
+                "rx_vlan_stag_hw_parse": "off [fixed]",
+                "scatter_gather": "on",
+                "tcp_segmentation_offload": "on",
+                "tls_hw_record": "off [fixed]",
+                "tls_hw_rx_offload": "off [fixed]",
+                "tls_hw_tx_offload": "off [fixed]",
+                "tx_checksum_fcoe_crc": "off [fixed]",
+                "tx_checksum_ip_generic": "on [fixed]",
+                "tx_checksum_ipv4": "off [fixed]",
+                "tx_checksum_ipv6": "off [fixed]",
+                "tx_checksum_sctp": "on [fixed]",
+                "tx_checksumming": "on",
+                "tx_esp_segmentation": "off [fixed]",
+                "tx_fcoe_segmentation": "off [fixed]",
+                "tx_gre_csum_segmentation": "off [fixed]",
+                "tx_gre_segmentation": "off [fixed]",
+                "tx_gso_partial": "off [fixed]",
+                "tx_gso_robust": "off [fixed]",
+                "tx_ipxip4_segmentation": "off [fixed]",
+                "tx_ipxip6_segmentation": "off [fixed]",
+                "tx_lockless": "on [fixed]",
+                "tx_nocache_copy": "off [fixed]",
+                "tx_scatter_gather": "on [fixed]",
+                "tx_scatter_gather_fraglist": "on [fixed]",
+                "tx_sctp_segmentation": "on",
+                "tx_tcp6_segmentation": "on",
+                "tx_tcp_ecn_segmentation": "on",
+                "tx_tcp_mangleid_segmentation": "on",
+                "tx_tcp_segmentation": "on",
+                "tx_udp_segmentation": "off [fixed]",
+                "tx_udp_tnl_csum_segmentation": "off [fixed]",
+                "tx_udp_tnl_segmentation": "off [fixed]",
+                "tx_vlan_offload": "off [fixed]",
+                "tx_vlan_stag_hw_insert": "off [fixed]",
+                "vlan_challenged": "on [fixed]"
+            },
+            "hw_timestamp_filters": [],
+            "ipv4": {
+                "address": "127.0.0.1",
+                "broadcast": "host",
+                "netmask": "255.0.0.0",
+                "network": "127.0.0.0"
+            },
+            "mtu": 65536,
+            "promisc": false,
+            "timestamping": [
+                "tx_software",
+                "rx_software",
+                "software"
+            ],
+            "type": "loopback"
+        },
+        "ansible_local": {},
+        "ansible_lsb": {
+            "codename": "focal",
+            "description": "Ubuntu 20.04.6 LTS",
+            "id": "Ubuntu",
+            "major_release": "20",
+            "release": "20.04"
+        },
+        "ansible_machine": "x86_64",
+        "ansible_machine_id": "c33b5d40120842788c78d801614fdc93",
+        "ansible_memfree_mb": 642,
+        "ansible_memory_mb": {
+            "nocache": {
+                "free": 827,
+                "used": 158
+            },
+            "real": {
+                "free": 642,
+                "total": 985,
+                "used": 343
+            },
+            "swap": {
+                "cached": 0,
+                "free": 1952,
+                "total": 1952,
+                "used": 0
+            }
+        },
+        "ansible_memtotal_mb": 985,
+        "ansible_mounts": [
+            {
+                "block_available": 29778055,
+                "block_size": 4096,
+                "block_total": 32266023,
+                "block_used": 2487968,
+                "device": "/dev/sda3",
+                "fstype": "ext4",
+                "inode_available": 8111326,
+                "inode_total": 8232960,
+                "inode_used": 121634,
+                "mount": "/",
+                "options": "rw,relatime,errors=remount-ro",
+                "size_available": 121970913280,
+                "size_total": 132161630208,
+                "uuid": "2f048649-31d0-47f0-8830-553c7a1fc4d6"
+            },
+            {
+                "block_available": 12876,
+                "block_size": 4096,
+                "block_total": 116486,
+                "block_used": 103610,
+                "device": "/dev/sda1",
+                "fstype": "ext4",
+                "inode_available": 124354,
+                "inode_total": 124672,
+                "inode_used": 318,
+                "mount": "/boot",
+                "options": "rw,relatime",
+                "size_available": 52740096,
+                "size_total": 477126656,
+                "uuid": "d58ba78b-2277-476d-b8fb-1b9c08ff950b"
+            }
+        ],
+        "ansible_nodename": "ubuntu2004.localdomain",
+        "ansible_os_family": "Debian",
+        "ansible_pkg_mgr": "apt",
+        "ansible_proc_cmdline": {
+            "BOOT_IMAGE": "/vmlinuz-5.4.0-169-generic",
+            "biosdevname": "0",
+            "net.ifnames": "0",
+            "quiet": true,
+            "ro": true,
+            "root": "UUID=2f048649-31d0-47f0-8830-553c7a1fc4d6"
+        },
+        "ansible_processor": [
+            "0",
+            "AuthenticAMD",
+            "AMD Ryzen 5 7535HS with Radeon Graphics"
+        ],
+        "ansible_processor_cores": 1,
+        "ansible_processor_count": 1,
+        "ansible_processor_threads_per_core": 1,
+        "ansible_processor_vcpus": 1,
+        "ansible_product_name": "VirtualBox",
+        "ansible_product_serial": "NA",
+        "ansible_product_uuid": "NA",
+        "ansible_product_version": "1.2",
+        "ansible_python": {
+            "executable": "/usr/bin/python3",
+            "has_sslcontext": true,
+            "type": "cpython",
+            "version": {
+                "major": 3,
+                "micro": 10,
+                "minor": 8,
+                "releaselevel": "final",
+                "serial": 0
+            },
+            "version_info": [
+                3,
+                8,
+                10,
+                "final",
+                0
+            ]
+        },
+        "ansible_python_version": "3.8.10",
+        "ansible_real_group_id": 1000,
+        "ansible_real_user_id": 1000,
+        "ansible_selinux": {
+            "status": "Missing selinux Python library"
+        },
+        "ansible_selinux_python_present": false,
+        "ansible_service_mgr": "systemd",
+        "ansible_ssh_host_key_ecdsa_public": "AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBCu/ugyvQ7M05JqBlBSOmx3GUyPam7bGzHnXTRk1lVM35o9l0Ul91R1EGD+kDb7VTg25UKufSaq+cKz7HK0fw3g=",
+        "ansible_ssh_host_key_ed25519_public": "AAAAC3NzaC1lZDI1NTE5AAAAIMb+4ZHphnP7q86V1jv3SEF5xo7bxXxvo1vaTkDvmLn1",
+        "ansible_ssh_host_key_rsa_public": "AAAAB3NzaC1yc2EAAAADAQABAAABgQC/PJGBmOraTwc3QcFimVt61sDb8WspbAhhd6MxrPHJ6+h11w1N3RrtO11ti8qX6fyLZ+dFDp8eC4D1cx5DpxLNfJ3BLY0tcVrpEf9qzAsqgbIDd8owYAV8+qA2VZ55IGtNSrhpheWtakfLS7a7exIm5OxBxMkK/iSlKavPwMHCFa99UBX78RJheTg980SFhaADHo5COpfzeFC1v+Pk9fOEnJV6zuw5IxiDDctAiax+7cUxnbSuahZwu6jirqzP6fiqDFeMdb5GelOaiX3kjEOs3/DGVLTmdIPUUtKL9Q1If+7apY0+/2Ezy0Xx1SEOUIO3IsJwVg0DP9yT5S00HzM6JX1bfonieS2fa2E7nAhvjUujTpgwB/qx7jkSQjdxNcudePLHoaXTcdXpzSiTz0LZKpL5pHil3HRYbz6dkNDxsTm/AysEWOPVNkayU6C/8YLBTnDA8z4o3WqkQPbgvkT16ioprKTd4I4EuXyYpKC5ZNgAwqF8HvZWeYgPYvHTbNs=",
+        "ansible_swapfree_mb": 1952,
+        "ansible_swaptotal_mb": 1952,
+        "ansible_system": "Linux",
+        "ansible_system_capabilities": [
+            ""
+        ],
+        "ansible_system_capabilities_enforced": "True",
+        "ansible_system_vendor": "innotek GmbH",
+        "ansible_uptime_seconds": 275,
+        "ansible_user_dir": "/home/vagrant",
+        "ansible_user_gecos": "vagrant,,,",
+        "ansible_user_gid": 1000,
+        "ansible_user_id": "vagrant",
+        "ansible_user_shell": "/bin/bash",
+        "ansible_user_uid": 1000,
+        "ansible_userspace_architecture": "x86_64",
+        "ansible_userspace_bits": "64",
+        "ansible_virtualization_role": "guest",
+        "ansible_virtualization_type": "virtualbox",
+        "discovered_interpreter_python": "/usr/bin/python3",
+        "gather_subset": [
+            "all"
+        ],
+        "module_setup": true
+    },
+    "changed": false
+}
+2025-07-16 03:06:06,305 p=1481 u=vagrant n=ansible | ERROR! 'host' is not a valid attribute for a Play
+
+The error appears to be in '/home/vagrant/ansible/example-9/facts.yaml': line 3, column 3, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+
+- name: facts Collection
+  ^ here
+
+2025-07-16 03:07:38,239 p=1502 u=vagrant n=ansible | PLAY [facts Collection] ************************************************************************************************
+2025-07-16 03:07:38,302 p=1502 u=vagrant n=ansible | TASK [Gathering Facts] *************************************************************************************************
+2025-07-16 03:07:42,290 p=1502 u=vagrant n=ansible | ok: [web]
+2025-07-16 03:07:42,309 p=1502 u=vagrant n=ansible | TASK [get os distribution] *********************************************************************************************
+2025-07-16 03:07:42,330 p=1502 u=vagrant n=ansible | fatal: [web]: FAILED! => {"msg": "Invalid options for debug: vars"}
+2025-07-16 03:07:42,333 p=1502 u=vagrant n=ansible | PLAY RECAP *************************************************************************************************************
+2025-07-16 03:07:42,333 p=1502 u=vagrant n=ansible | web                        : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2025-07-16 03:09:36,342 p=1533 u=vagrant n=ansible | PLAY [facts Collection] ************************************************************************************************
+2025-07-16 03:09:36,381 p=1533 u=vagrant n=ansible | TASK [Gathering Facts] *************************************************************************************************
+2025-07-16 03:09:39,803 p=1533 u=vagrant n=ansible | ok: [web]
+2025-07-16 03:09:39,814 p=1533 u=vagrant n=ansible | TASK [get os distribution] *********************************************************************************************
+2025-07-16 03:09:39,974 p=1533 u=vagrant n=ansible | ok: [web] => {
+    "ansible_distribution": "Ubuntu"
+}
+2025-07-16 03:09:39,977 p=1533 u=vagrant n=ansible | PLAY RECAP *************************************************************************************************************
+2025-07-16 03:09:39,978 p=1533 u=vagrant n=ansible | web                        : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2025-07-16 03:09:48,166 p=1563 u=vagrant n=ansible | PLAY [facts Collection] ************************************************************************************************
+2025-07-16 03:09:48,188 p=1563 u=vagrant n=ansible | TASK [Gathering Facts] *************************************************************************************************
+2025-07-16 03:09:50,122 p=1563 u=vagrant n=ansible | ok: [web]
+2025-07-16 03:09:50,134 p=1563 u=vagrant n=ansible | TASK [get os distribution] *********************************************************************************************
+2025-07-16 03:09:50,209 p=1563 u=vagrant n=ansible | ok: [web] => {
+    "ansible_distribution": "Ubuntu"
+}
+2025-07-16 03:09:50,218 p=1563 u=vagrant n=ansible | PLAY RECAP *************************************************************************************************************
+2025-07-16 03:09:50,219 p=1563 u=vagrant n=ansible | web                        : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2025-07-16 03:10:58,673 p=1602 u=vagrant n=ansible | PLAY [facts Collection] ************************************************************************************************
+2025-07-16 03:10:58,693 p=1602 u=vagrant n=ansible | TASK [Gathering Facts] *************************************************************************************************
+2025-07-16 03:11:01,495 p=1602 u=vagrant n=ansible | ok: [web]
+2025-07-16 03:11:01,509 p=1602 u=vagrant n=ansible | TASK [get os distribution] *********************************************************************************************
+2025-07-16 03:11:01,589 p=1602 u=vagrant n=ansible | ok: [web] => {
+    "ansible_distribution": "Ubuntu"
+}
+2025-07-16 03:11:01,598 p=1602 u=vagrant n=ansible | TASK [get memory info] *************************************************************************************************
+2025-07-16 03:11:01,675 p=1602 u=vagrant n=ansible | ok: [web] => {
+    "ansible_memory_mb": {
+        "nocache": {
+            "free": 824,
+            "used": 161
+        },
+        "real": {
+            "free": 637,
+            "total": 985,
+            "used": 348
+        },
+        "swap": {
+            "cached": 0,
+            "free": 1952,
+            "total": 1952,
+            "used": 0
+        }
+    }
+}
+2025-07-16 03:11:01,680 p=1602 u=vagrant n=ansible | PLAY RECAP *************************************************************************************************************
+2025-07-16 03:11:01,681 p=1602 u=vagrant n=ansible | web                        : ok=3    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2025-07-16 03:17:39,001 p=1781 u=vagrant n=ansible | PLAY [facts Collection] ************************************************************************************************
+2025-07-16 03:17:39,041 p=1781 u=vagrant n=ansible | TASK [Gathering Facts] *************************************************************************************************
+2025-07-16 03:17:44,148 p=1781 u=vagrant n=ansible | ok: [web]
+2025-07-16 03:17:44,161 p=1781 u=vagrant n=ansible | TASK [get os distribution] *********************************************************************************************
+2025-07-16 03:17:44,234 p=1781 u=vagrant n=ansible | ok: [web] => {
+    "ansible_distribution": "Ubuntu"
+}
+2025-07-16 03:17:44,247 p=1781 u=vagrant n=ansible | TASK [get memory info] *************************************************************************************************
+2025-07-16 03:17:44,317 p=1781 u=vagrant n=ansible | ok: [web] => {
+    "ansible_memory_mb": {
+        "nocache": {
+            "free": 824,
+            "used": 161
+        },
+        "real": {
+            "free": 637,
+            "total": 985,
+            "used": 348
+        },
+        "swap": {
+            "cached": 0,
+            "free": 1952,
+            "total": 1952,
+            "used": 0
+        }
+    }
+}
+2025-07-16 03:17:44,325 p=1781 u=vagrant n=ansible | PLAY RECAP *************************************************************************************************************
+2025-07-16 03:17:44,326 p=1781 u=vagrant n=ansible | web                        : ok=3    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2025-07-16 03:52:29,779 p=1910 u=vagrant n=ansible | PLAY [Conditions Practice] *********************************************************************************************
+2025-07-16 03:52:29,821 p=1910 u=vagrant n=ansible | TASK [Gathering Facts] *************************************************************************************************
+2025-07-16 03:52:34,628 p=1910 u=vagrant n=ansible | ok: [web]
+2025-07-16 03:52:35,941 p=1910 u=vagrant n=ansible | ok: [web1]
+2025-07-16 03:52:35,950 p=1910 u=vagrant n=ansible | TASK [Install pkg] *****************************************************************************************************
+2025-07-16 03:52:39,852 p=1910 u=vagrant n=ansible | ok: [web]
+2025-07-16 03:53:20,872 p=1910 u=vagrant n=ansible | changed: [web1]
+2025-07-16 03:53:20,882 p=1910 u=vagrant n=ansible | TASK [Install pkg] *****************************************************************************************************
+2025-07-16 03:53:20,950 p=1910 u=vagrant n=ansible | skipping: [web]
+2025-07-16 03:53:20,955 p=1910 u=vagrant n=ansible | skipping: [web1]
+2025-07-16 03:53:20,959 p=1910 u=vagrant n=ansible | PLAY RECAP *************************************************************************************************************
+2025-07-16 03:53:20,960 p=1910 u=vagrant n=ansible | web                        : ok=2    changed=0    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2025-07-16 03:53:20,960 p=1910 u=vagrant n=ansible | web1                       : ok=2    changed=1    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2025-07-16 06:22:02,841 p=2093 u=vagrant n=ansible | PLAY [Conditions Practice] *********************************************************************************************
+2025-07-16 06:22:02,890 p=2093 u=vagrant n=ansible | TASK [Gathering Facts] *************************************************************************************************
+2025-07-16 06:22:08,835 p=2093 u=vagrant n=ansible | ok: [web]
+2025-07-16 06:22:11,143 p=2093 u=vagrant n=ansible | ok: [web1]
+2025-07-16 06:22:11,155 p=2093 u=vagrant n=ansible | TASK [Install pkg] *****************************************************************************************************
+2025-07-16 06:22:11,318 p=2093 u=vagrant n=ansible | skipping: [web1] => (item=apache2) 
+2025-07-16 06:22:11,321 p=2093 u=vagrant n=ansible | skipping: [web1] => (item=git) 
+2025-07-16 06:22:11,321 p=2093 u=vagrant n=ansible | skipping: [web1] => (item=wget) 
+2025-07-16 06:22:11,321 p=2093 u=vagrant n=ansible | skipping: [web1] => (item=chrony) 
+2025-07-16 06:22:15,508 p=2093 u=vagrant n=ansible | ok: [web] => (item=apache2)
+2025-07-16 06:22:17,576 p=2093 u=vagrant n=ansible | ok: [web] => (item=git)
+2025-07-16 06:22:19,646 p=2093 u=vagrant n=ansible | ok: [web] => (item=wget)
+2025-07-16 06:22:21,496 p=2093 u=vagrant n=ansible | ok: [web] => (item=chrony)
+2025-07-16 06:22:21,509 p=2093 u=vagrant n=ansible | TASK [Install pkg] *****************************************************************************************************
+2025-07-16 06:22:21,574 p=2093 u=vagrant n=ansible | skipping: [web]
+2025-07-16 06:23:49,887 p=2093 u=vagrant n=ansible | changed: [web1]
+2025-07-16 06:23:49,900 p=2093 u=vagrant n=ansible | TASK [Add Group] *******************************************************************************************************
+2025-07-16 06:23:51,513 p=2093 u=vagrant n=ansible | fatal: [web]: FAILED! => {"changed": false, "msg": "Unsupported parameters for (group) module: staee Supported parameters include: gid, local, name, non_unique, state, system"}
+2025-07-16 06:23:51,587 p=2093 u=vagrant n=ansible | fatal: [web1]: FAILED! => {"changed": false, "msg": "Unsupported parameters for (group) module: staee Supported parameters include: gid, local, name, non_unique, state, system"}
+2025-07-16 06:23:51,590 p=2093 u=vagrant n=ansible | PLAY RECAP *************************************************************************************************************
+2025-07-16 06:23:51,591 p=2093 u=vagrant n=ansible | web                        : ok=2    changed=0    unreachable=0    failed=1    skipped=1    rescued=0    ignored=0   
+2025-07-16 06:23:51,591 p=2093 u=vagrant n=ansible | web1                       : ok=2    changed=1    unreachable=0    failed=1    skipped=1    rescued=0    ignored=0   
+2025-07-16 06:25:38,777 p=2343 u=vagrant n=ansible | PLAY [Conditions Practice] *********************************************************************************************
+2025-07-16 06:25:38,815 p=2343 u=vagrant n=ansible | TASK [Gathering Facts] *************************************************************************************************
+2025-07-16 06:25:41,578 p=2343 u=vagrant n=ansible | ok: [web]
+2025-07-16 06:25:42,255 p=2343 u=vagrant n=ansible | ok: [web1]
+2025-07-16 06:25:42,264 p=2343 u=vagrant n=ansible | TASK [Install pkg] *****************************************************************************************************
+2025-07-16 06:25:42,337 p=2343 u=vagrant n=ansible | skipping: [web1] => (item=apache2) 
+2025-07-16 06:25:42,338 p=2343 u=vagrant n=ansible | skipping: [web1] => (item=git) 
+2025-07-16 06:25:42,351 p=2343 u=vagrant n=ansible | skipping: [web1] => (item=wget) 
+2025-07-16 06:25:42,358 p=2343 u=vagrant n=ansible | skipping: [web1] => (item=chrony) 
+2025-07-16 06:25:45,469 p=2343 u=vagrant n=ansible | ok: [web] => (item=apache2)
+2025-07-16 06:25:47,554 p=2343 u=vagrant n=ansible | ok: [web] => (item=git)
+2025-07-16 06:25:49,528 p=2343 u=vagrant n=ansible | ok: [web] => (item=wget)
+2025-07-16 06:25:51,432 p=2343 u=vagrant n=ansible | ok: [web] => (item=chrony)
+2025-07-16 06:25:51,443 p=2343 u=vagrant n=ansible | TASK [Install pkg] *****************************************************************************************************
+2025-07-16 06:25:51,522 p=2343 u=vagrant n=ansible | skipping: [web]
+2025-07-16 06:25:54,482 p=2343 u=vagrant n=ansible | fatal: [web1]: FAILED! => {"changed": false, "failures": ["maraidb-server No match for argument: maraidb-server"], "msg": "Failed to install some of the specified packages", "rc": 1, "results": []}
+2025-07-16 06:25:54,492 p=2343 u=vagrant n=ansible | TASK [Add Group] *******************************************************************************************************
+2025-07-16 06:25:55,090 p=2343 u=vagrant n=ansible | fatal: [web]: FAILED! => {"changed": false, "msg": "Unsupported parameters for (group) module: stae Supported parameters include: gid, local, name, non_unique, state, system"}
+2025-07-16 06:25:55,092 p=2343 u=vagrant n=ansible | PLAY RECAP *************************************************************************************************************
+2025-07-16 06:25:55,093 p=2343 u=vagrant n=ansible | web                        : ok=2    changed=0    unreachable=0    failed=1    skipped=1    rescued=0    ignored=0   
+2025-07-16 06:25:55,094 p=2343 u=vagrant n=ansible | web1                       : ok=1    changed=0    unreachable=0    failed=1    skipped=1    rescued=0    ignored=0   
+2025-07-16 06:26:40,706 p=2487 u=vagrant n=ansible | PLAY [Conditions Practice] *********************************************************************************************
+2025-07-16 06:26:40,735 p=2487 u=vagrant n=ansible | TASK [Gathering Facts] *************************************************************************************************
+2025-07-16 06:26:43,117 p=2487 u=vagrant n=ansible | ok: [web]
+2025-07-16 06:26:44,245 p=2487 u=vagrant n=ansible | ok: [web1]
+2025-07-16 06:26:44,260 p=2487 u=vagrant n=ansible | TASK [Install pkg] *****************************************************************************************************
+2025-07-16 06:26:44,708 p=2487 u=vagrant n=ansible | skipping: [web1] => (item=apache2) 
+2025-07-16 06:26:44,712 p=2487 u=vagrant n=ansible | skipping: [web1] => (item=git) 
+2025-07-16 06:26:44,714 p=2487 u=vagrant n=ansible | skipping: [web1] => (item=wget) 
+2025-07-16 06:26:44,714 p=2487 u=vagrant n=ansible | skipping: [web1] => (item=chrony) 
+2025-07-16 06:26:47,235 p=2487 u=vagrant n=ansible | ok: [web] => (item=apache2)
+2025-07-16 06:26:49,142 p=2487 u=vagrant n=ansible | ok: [web] => (item=git)
+2025-07-16 06:26:50,955 p=2487 u=vagrant n=ansible | ok: [web] => (item=wget)
+2025-07-16 06:26:52,491 p=2487 u=vagrant n=ansible | ok: [web] => (item=chrony)
+2025-07-16 06:26:52,499 p=2487 u=vagrant n=ansible | TASK [Install pkg] *****************************************************************************************************
+2025-07-16 06:26:52,559 p=2487 u=vagrant n=ansible | skipping: [web]
+2025-07-16 06:26:55,652 p=2487 u=vagrant n=ansible | ok: [web1]
+2025-07-16 06:26:55,659 p=2487 u=vagrant n=ansible | TASK [Add Group] *******************************************************************************************************
+2025-07-16 06:26:56,328 p=2487 u=vagrant n=ansible | ok: [web]
+2025-07-16 06:26:57,300 p=2487 u=vagrant n=ansible | changed: [web1]
+2025-07-16 06:26:57,308 p=2487 u=vagrant n=ansible | TASK [Add User devopsgrp] **********************************************************************************************
+2025-07-16 06:26:57,375 p=2487 u=vagrant n=ansible | fatal: [web]: FAILED! => {"msg": "The task includes an option with an undefined variable. The error was: 'item' is undefined\n\nThe error appears to be in '/home/vagrant/ansible/example-10/conditions.yaml': line 30, column 7, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n\n    - name: Add User devopsgrp\n      ^ here\n"}
+2025-07-16 06:26:57,384 p=2487 u=vagrant n=ansible | fatal: [web1]: FAILED! => {"msg": "The task includes an option with an undefined variable. The error was: 'item' is undefined\n\nThe error appears to be in '/home/vagrant/ansible/example-10/conditions.yaml': line 30, column 7, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n\n    - name: Add User devopsgrp\n      ^ here\n"}
+2025-07-16 06:26:57,387 p=2487 u=vagrant n=ansible | PLAY RECAP *************************************************************************************************************
+2025-07-16 06:26:57,388 p=2487 u=vagrant n=ansible | web                        : ok=3    changed=0    unreachable=0    failed=1    skipped=1    rescued=0    ignored=0   
+2025-07-16 06:26:57,389 p=2487 u=vagrant n=ansible | web1                       : ok=3    changed=1    unreachable=0    failed=1    skipped=1    rescued=0    ignored=0   
+2025-07-16 06:30:21,145 p=2685 u=vagrant n=ansible | ERROR! the playbook: n could not be found
+2025-07-16 06:30:23,731 p=2687 u=vagrant n=ansible | PLAY [Conditions Practice] *********************************************************************************************
+2025-07-16 06:30:23,774 p=2687 u=vagrant n=ansible | TASK [Gathering Facts] *************************************************************************************************
+2025-07-16 06:30:27,572 p=2687 u=vagrant n=ansible | ok: [web]
+2025-07-16 06:30:27,990 p=2687 u=vagrant n=ansible | ok: [web1]
+2025-07-16 06:30:27,999 p=2687 u=vagrant n=ansible | TASK [Install pkg] *****************************************************************************************************
+2025-07-16 06:30:28,075 p=2687 u=vagrant n=ansible | skipping: [web1] => (item=apache2) 
+2025-07-16 06:30:28,079 p=2687 u=vagrant n=ansible | skipping: [web1] => (item=git) 
+2025-07-16 06:30:28,081 p=2687 u=vagrant n=ansible | skipping: [web1] => (item=wget) 
+2025-07-16 06:30:28,090 p=2687 u=vagrant n=ansible | skipping: [web1] => (item=chrony) 
+2025-07-16 06:30:31,863 p=2687 u=vagrant n=ansible | ok: [web] => (item=apache2)
+2025-07-16 06:30:34,012 p=2687 u=vagrant n=ansible | ok: [web] => (item=git)
+2025-07-16 06:30:35,944 p=2687 u=vagrant n=ansible | ok: [web] => (item=wget)
+2025-07-16 06:30:37,912 p=2687 u=vagrant n=ansible | ok: [web] => (item=chrony)
+2025-07-16 06:30:37,925 p=2687 u=vagrant n=ansible | TASK [Install pkg] *****************************************************************************************************
+2025-07-16 06:30:37,974 p=2687 u=vagrant n=ansible | skipping: [web]
+2025-07-16 06:30:46,709 p=2687 u=vagrant n=ansible | ok: [web1]
+2025-07-16 06:30:46,723 p=2687 u=vagrant n=ansible | TASK [Add Group] *******************************************************************************************************
+2025-07-16 06:30:47,488 p=2687 u=vagrant n=ansible | ok: [web]
+2025-07-16 06:30:47,897 p=2687 u=vagrant n=ansible | ok: [web1]
+2025-07-16 06:30:47,908 p=2687 u=vagrant n=ansible | TASK [Add User devopsgrp] **********************************************************************************************
+2025-07-16 06:30:47,957 p=2687 u=vagrant n=ansible | fatal: [web]: FAILED! => {"msg": "The task includes an option with an undefined variable. The error was: 'item' is undefined\n\nThe error appears to be in '/home/vagrant/ansible/example-10/conditions.yaml': line 30, column 7, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n\n    - name: Add User devopsgrp\n      ^ here\n"}
+2025-07-16 06:30:47,992 p=2687 u=vagrant n=ansible | fatal: [web1]: FAILED! => {"msg": "The task includes an option with an undefined variable. The error was: 'item' is undefined\n\nThe error appears to be in '/home/vagrant/ansible/example-10/conditions.yaml': line 30, column 7, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n\n    - name: Add User devopsgrp\n      ^ here\n"}
+2025-07-16 06:30:47,997 p=2687 u=vagrant n=ansible | PLAY RECAP *************************************************************************************************************
+2025-07-16 06:30:47,999 p=2687 u=vagrant n=ansible | web                        : ok=3    changed=0    unreachable=0    failed=1    skipped=1    rescued=0    ignored=0   
+2025-07-16 06:30:47,999 p=2687 u=vagrant n=ansible | web1                       : ok=3    changed=0    unreachable=0    failed=1    skipped=1    rescued=0    ignored=0   
+2025-07-16 06:32:48,802 p=2871 u=vagrant n=ansible | PLAY [Conditions Practice] *********************************************************************************************
+2025-07-16 06:32:48,852 p=2871 u=vagrant n=ansible | TASK [Gathering Facts] *************************************************************************************************
+2025-07-16 06:32:53,304 p=2871 u=vagrant n=ansible | ok: [web]
+2025-07-16 06:32:54,450 p=2871 u=vagrant n=ansible | ok: [web1]
+2025-07-16 06:32:54,460 p=2871 u=vagrant n=ansible | TASK [Install pkg] *****************************************************************************************************
+2025-07-16 06:32:54,553 p=2871 u=vagrant n=ansible | skipping: [web1] => (item=apache2) 
+2025-07-16 06:32:54,557 p=2871 u=vagrant n=ansible | skipping: [web1] => (item=git) 
+2025-07-16 06:32:54,558 p=2871 u=vagrant n=ansible | skipping: [web1] => (item=wget) 
+2025-07-16 06:32:54,559 p=2871 u=vagrant n=ansible | skipping: [web1] => (item=chrony) 
+2025-07-16 06:32:58,274 p=2871 u=vagrant n=ansible | ok: [web] => (item=apache2)
+2025-07-16 06:33:00,091 p=2871 u=vagrant n=ansible | ok: [web] => (item=git)
+2025-07-16 06:33:01,898 p=2871 u=vagrant n=ansible | ok: [web] => (item=wget)
+2025-07-16 06:33:03,632 p=2871 u=vagrant n=ansible | ok: [web] => (item=chrony)
+2025-07-16 06:33:03,645 p=2871 u=vagrant n=ansible | TASK [Install pkg] *****************************************************************************************************
+2025-07-16 06:33:03,707 p=2871 u=vagrant n=ansible | skipping: [web]
+2025-07-16 06:33:11,741 p=2871 u=vagrant n=ansible | ok: [web1]
+2025-07-16 06:33:11,751 p=2871 u=vagrant n=ansible | TASK [Add Group] *******************************************************************************************************
+2025-07-16 06:33:12,476 p=2871 u=vagrant n=ansible | ok: [web]
+2025-07-16 06:33:13,010 p=2871 u=vagrant n=ansible | ok: [web1]
+2025-07-16 06:33:13,019 p=2871 u=vagrant n=ansible | TASK [Add User devopsgrp] **********************************************************************************************
+2025-07-16 06:33:14,101 p=2871 u=vagrant n=ansible | ok: [web] => (item=user1)
+2025-07-16 06:33:14,612 p=2871 u=vagrant n=ansible | ok: [web] => (item=user2)
+2025-07-16 06:33:15,182 p=2871 u=vagrant n=ansible | ok: [web] => (item=user3)
+2025-07-16 06:33:15,831 p=2871 u=vagrant n=ansible | changed: [web] => (item=user4)
+2025-07-16 06:33:16,086 p=2871 u=vagrant n=ansible | changed: [web1] => (item=user1)
+2025-07-16 06:33:17,782 p=2871 u=vagrant n=ansible | changed: [web1] => (item=user2)
+2025-07-16 06:33:19,684 p=2871 u=vagrant n=ansible | changed: [web1] => (item=user3)
+2025-07-16 06:33:21,528 p=2871 u=vagrant n=ansible | changed: [web1] => (item=user4)
+2025-07-16 06:33:21,531 p=2871 u=vagrant n=ansible | PLAY RECAP *************************************************************************************************************
+2025-07-16 06:33:21,532 p=2871 u=vagrant n=ansible | web                        : ok=4    changed=1    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2025-07-16 06:33:21,532 p=2871 u=vagrant n=ansible | web1                       : ok=4    changed=1    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+2025-07-17 04:29:34,463 p=3086 u=vagrant n=ansible | PLAY [Conditions Practice] **************************************************************************************************************************************************************************************
+2025-07-17 04:29:34,525 p=3086 u=vagrant n=ansible | TASK [Gathering Facts] ******************************************************************************************************************************************************************************************
+2025-07-17 04:29:41,685 p=3086 u=vagrant n=ansible | ok: [web1]
+2025-07-17 04:29:41,965 p=3086 u=vagrant n=ansible | ok: [web]
+2025-07-17 04:29:41,974 p=3086 u=vagrant n=ansible | TASK [demo-app : Install pkg] ***********************************************************************************************************************************************************************************
+2025-07-17 04:29:42,088 p=3086 u=vagrant n=ansible | skipping: [web1] => (item=apache2) 
+2025-07-17 04:29:42,092 p=3086 u=vagrant n=ansible | skipping: [web1] => (item=git) 
+2025-07-17 04:29:42,101 p=3086 u=vagrant n=ansible | skipping: [web1] => (item=wget) 
+2025-07-17 04:29:42,164 p=3086 u=vagrant n=ansible | skipping: [web1] => (item=chrony) 
+2025-07-17 04:29:46,238 p=3086 u=vagrant n=ansible | ok: [web] => (item=apache2)
+2025-07-17 04:29:48,348 p=3086 u=vagrant n=ansible | ok: [web] => (item=git)
+2025-07-17 04:29:50,561 p=3086 u=vagrant n=ansible | ok: [web] => (item=wget)
+2025-07-17 04:29:52,603 p=3086 u=vagrant n=ansible | ok: [web] => (item=chrony)
+2025-07-17 04:29:52,616 p=3086 u=vagrant n=ansible | TASK [demo-app : Install pkg] ***********************************************************************************************************************************************************************************
+2025-07-17 04:29:52,674 p=3086 u=vagrant n=ansible | skipping: [web] => (item=chrony) 
+2025-07-17 04:29:52,675 p=3086 u=vagrant n=ansible | skipping: [web] => (item=mariadb-server) 
+2025-07-17 04:30:03,982 p=3086 u=vagrant n=ansible | ok: [web1] => (item=chrony)
+2025-07-17 04:30:07,270 p=3086 u=vagrant n=ansible | ok: [web1] => (item=mariadb-server)
+2025-07-17 04:30:07,307 p=3086 u=vagrant n=ansible | TASK [demo-app : Start chrony service] **************************************************************************************************************************************************************************
+2025-07-17 04:30:08,561 p=3086 u=vagrant n=ansible | ok: [web]
+2025-07-17 04:30:09,330 p=3086 u=vagrant n=ansible | ok: [web1]
+2025-07-17 04:30:09,343 p=3086 u=vagrant n=ansible | TASK [demo-app : Updated Chrony conf on Ubuntu] *****************************************************************************************************************************************************************
+2025-07-17 04:30:09,440 p=3086 u=vagrant n=ansible | skipping: [web1]
+2025-07-17 04:30:10,879 p=3086 u=vagrant n=ansible | ok: [web]
+2025-07-17 04:30:10,888 p=3086 u=vagrant n=ansible | TASK [demo-app : Updated Chrony conf on CentOs] *****************************************************************************************************************************************************************
+2025-07-17 04:30:10,985 p=3086 u=vagrant n=ansible | skipping: [web]
+2025-07-17 04:30:13,680 p=3086 u=vagrant n=ansible | ok: [web1]
+2025-07-17 04:30:13,692 p=3086 u=vagrant n=ansible | TASK [demo-app : Add ssh Banner] ********************************************************************************************************************************************************************************
+2025-07-17 04:30:15,214 p=3086 u=vagrant n=ansible | changed: [web]
+2025-07-17 04:30:16,341 p=3086 u=vagrant n=ansible | changed: [web1]
+2025-07-17 04:30:16,349 p=3086 u=vagrant n=ansible | TASK [demo-app : Updated sshd_config for ssh Banner] ************************************************************************************************************************************************************
+2025-07-17 04:30:17,003 p=3086 u=vagrant n=ansible | fatal: [web]: FAILED! => {"changed": false, "msg": "Unsupported parameters for (lineinfile) module: notify Supported parameters include: attributes, backrefs, backup, content, create, delimiter, directory_mode, firstmatch, follow, force, group, insertafter, insertbefore, line, mode, owner, path, regexp, remote_src, selevel, serole, setype, seuser, src, state, unsafe_writes, validate"}
+2025-07-17 04:30:17,447 p=3086 u=vagrant n=ansible | fatal: [web1]: FAILED! => {"changed": false, "msg": "Unsupported parameters for (lineinfile) module: notify Supported parameters include: attributes, backrefs, backup, content, create, delimiter, directory_mode, firstmatch, follow, force, group, insertafter, insertbefore, line, mode, owner, path, regexp, remote_src, selevel, serole, setype, seuser, src, state, unsafe_writes, validate"}
+2025-07-17 04:30:17,449 p=3086 u=vagrant n=ansible | PLAY RECAP ******************************************************************************************************************************************************************************************************
+2025-07-17 04:30:17,450 p=3086 u=vagrant n=ansible | web                        : ok=5    changed=1    unreachable=0    failed=1    skipped=2    rescued=0    ignored=0   
+2025-07-17 04:30:17,450 p=3086 u=vagrant n=ansible | web1                       : ok=5    changed=1    unreachable=0    failed=1    skipped=2    rescued=0    ignored=0   
+2025-07-17 04:34:43,423 p=3417 u=vagrant n=ansible | PLAY [Conditions Practice] **************************************************************************************************************************************************************************************
+2025-07-17 04:34:43,444 p=3417 u=vagrant n=ansible | TASK [Gathering Facts] ******************************************************************************************************************************************************************************************
+2025-07-17 04:34:46,302 p=3417 u=vagrant n=ansible | ok: [web]
+2025-07-17 04:34:46,584 p=3417 u=vagrant n=ansible | ok: [web1]
+2025-07-17 04:34:46,590 p=3417 u=vagrant n=ansible | TASK [demo-app : Install pkg] ***********************************************************************************************************************************************************************************
+2025-07-17 04:34:46,746 p=3417 u=vagrant n=ansible | skipping: [web1] => (item=apache2) 
+2025-07-17 04:34:46,748 p=3417 u=vagrant n=ansible | skipping: [web1] => (item=git) 
+2025-07-17 04:34:46,750 p=3417 u=vagrant n=ansible | skipping: [web1] => (item=wget) 
+2025-07-17 04:34:46,752 p=3417 u=vagrant n=ansible | skipping: [web1] => (item=chrony) 
+2025-07-17 04:34:48,556 p=3417 u=vagrant n=ansible | ok: [web] => (item=apache2)
+2025-07-17 04:34:50,172 p=3417 u=vagrant n=ansible | ok: [web] => (item=git)
+2025-07-17 04:34:52,093 p=3417 u=vagrant n=ansible | ok: [web] => (item=wget)
+2025-07-17 04:34:53,998 p=3417 u=vagrant n=ansible | ok: [web] => (item=chrony)
+2025-07-17 04:34:54,010 p=3417 u=vagrant n=ansible | TASK [demo-app : Install pkg] ***********************************************************************************************************************************************************************************
+2025-07-17 04:34:54,072 p=3417 u=vagrant n=ansible | skipping: [web] => (item=chrony) 
+2025-07-17 04:34:54,077 p=3417 u=vagrant n=ansible | skipping: [web] => (item=mariadb-server) 
+2025-07-17 04:34:56,680 p=3417 u=vagrant n=ansible | ok: [web1] => (item=chrony)
+2025-07-17 04:34:58,959 p=3417 u=vagrant n=ansible | ok: [web1] => (item=mariadb-server)
+2025-07-17 04:34:58,968 p=3417 u=vagrant n=ansible | TASK [demo-app : Start chrony service] **************************************************************************************************************************************************************************
+2025-07-17 04:35:00,047 p=3417 u=vagrant n=ansible | ok: [web]
+2025-07-17 04:35:00,645 p=3417 u=vagrant n=ansible | ok: [web1]
+2025-07-17 04:35:00,652 p=3417 u=vagrant n=ansible | TASK [demo-app : Updated Chrony conf on Ubuntu] *****************************************************************************************************************************************************************
+2025-07-17 04:35:00,723 p=3417 u=vagrant n=ansible | skipping: [web1]
+2025-07-17 04:35:01,819 p=3417 u=vagrant n=ansible | ok: [web]
+2025-07-17 04:35:01,828 p=3417 u=vagrant n=ansible | TASK [demo-app : Updated Chrony conf on CentOs] *****************************************************************************************************************************************************************
+2025-07-17 04:35:01,881 p=3417 u=vagrant n=ansible | skipping: [web]
+2025-07-17 04:35:03,627 p=3417 u=vagrant n=ansible | ok: [web1]
+2025-07-17 04:35:03,635 p=3417 u=vagrant n=ansible | TASK [demo-app : Add ssh Banner] ********************************************************************************************************************************************************************************
+2025-07-17 04:35:04,610 p=3417 u=vagrant n=ansible | ok: [web]
+2025-07-17 04:35:05,759 p=3417 u=vagrant n=ansible | ok: [web1]
+2025-07-17 04:35:05,767 p=3417 u=vagrant n=ansible | TASK [demo-app : Updated sshd_config for ssh Banner] ************************************************************************************************************************************************************
+2025-07-17 04:35:06,471 p=3417 u=vagrant n=ansible | ok: [web]
+2025-07-17 04:35:07,075 p=3417 u=vagrant n=ansible | ok: [web1]
+2025-07-17 04:35:07,083 p=3417 u=vagrant n=ansible | TASK [demo-app : Add Group] *************************************************************************************************************************************************************************************
+2025-07-17 04:35:07,872 p=3417 u=vagrant n=ansible | ok: [web]
+2025-07-17 04:35:08,419 p=3417 u=vagrant n=ansible | ok: [web1]
+2025-07-17 04:35:08,429 p=3417 u=vagrant n=ansible | TASK [demo-app : Add User devopsgrp] ****************************************************************************************************************************************************************************
+2025-07-17 04:35:09,379 p=3417 u=vagrant n=ansible | ok: [web] => (item=user1)
+2025-07-17 04:35:09,853 p=3417 u=vagrant n=ansible | ok: [web] => (item=user2)
+2025-07-17 04:35:09,961 p=3417 u=vagrant n=ansible | ok: [web1] => (item=user1)
+2025-07-17 04:35:10,419 p=3417 u=vagrant n=ansible | ok: [web] => (item=user3)
+2025-07-17 04:35:11,019 p=3417 u=vagrant n=ansible | ok: [web] => (item=user4)
+2025-07-17 04:35:11,229 p=3417 u=vagrant n=ansible | ok: [web1] => (item=user2)
+2025-07-17 04:35:12,159 p=3417 u=vagrant n=ansible | ok: [web1] => (item=user3)
+2025-07-17 04:35:13,226 p=3417 u=vagrant n=ansible | ok: [web1] => (item=user4)
+2025-07-17 04:35:13,233 p=3417 u=vagrant n=ansible | TASK [demo-app : Directory for files] ***************************************************************************************************************************************************************************
+2025-07-17 04:35:13,721 p=3417 u=vagrant n=ansible | changed: [web]
+2025-07-17 04:35:14,263 p=3417 u=vagrant n=ansible | changed: [web1]
+2025-07-17 04:35:14,271 p=3417 u=vagrant n=ansible | TASK [demo-app : Copy file to a remote directory] ***************************************************************************************************************************************************************
+2025-07-17 04:35:15,806 p=3417 u=vagrant n=ansible | changed: [web]
+2025-07-17 04:35:16,865 p=3417 u=vagrant n=ansible | changed: [web1]
+2025-07-17 04:35:16,900 p=3417 u=vagrant n=ansible | PLAY RECAP ******************************************************************************************************************************************************************************************************
+2025-07-17 04:35:16,901 p=3417 u=vagrant n=ansible | web                        : ok=10   changed=2    unreachable=0    failed=0    skipped=2    rescued=0    ignored=0   
+2025-07-17 04:35:16,902 p=3417 u=vagrant n=ansible | web1                       : ok=10   changed=2    unreachable=0    failed=0    skipped=2    rescued=0    ignored=0   

@@ -1,0 +1,6 @@
+ansible-playbook -i inventory playbook.yml --syntax-check [Syntax Check]
+ansible-playbook -i inventory playbook.yml -C [Try RUN]
+ansible-playbook playbook.yml [after update anisble.cfg]
+ansible-doc -l [all the modules in ansible]
+ansible -m "setup" web  [Information about os]
+ansible-galaxy role init demo-app
