@@ -1,0 +1,23 @@
+web ansible_host=192.168.56.35 ansible_user=vagrant ansible_password=vagrant
+web1 ansible_host=192.168.56.40 
+
+
+
+
+
+# making the group
+
+[webserver]
+web
+
+[dbservergrp]
+web1
+
+
+#[myservergrp:children]
+#webserver
+#dbservergrp
+
+[dbservergrp:vars]
+ansible_user=vagrant
+ansible_password=vagrant
